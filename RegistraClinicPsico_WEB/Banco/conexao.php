@@ -1,14 +1,44 @@
 <?php  
 
-$dns = "mysql:dbname=PSICO;host=localhost";
-$dbuser = "root";
-$dbpass = "";
+class Banco{
 
-try{
-	$pdo = new PDO($dns,$dbuser,$dbpass);
+	private $pdo;
+	private $numRows;
+	private $array;
+	
+	public function __construct($host,$dbname,$dbuser,$dbpass){
 
-} catch(PDOException $e){
-	echo "falhou:".$e->getMessage();
+		try{
+			$this->pdo = new pdo("mysql:dbname=".$dbname.";host=".$host, $dbuser, $dbpass);	
+		}catch(PDOExeption $e){
+			echo "Falhou :".$e->getMessage();
+		}
+	}
+
+	public function query($sql){
+		$query = $this->pdo->query($sql);
+		$this->numRows = $query->rowCount();
+		$this->array = $query->fetchAll();
+	}
+
+	public function numRows(){
+		return $this->numRows;
+	}
+	public function result(){
+		return $this->array;
+	}
+
+	public function insert($table,$data){
+		if (!empty($table)  && (is_array($data) && count($data) > 0)) {
+			$sql = "INSERT INTO ".$table." SET ";
+			$dados = array( );
+			foreach ($data as $chave => $valor) {
+				$dados[] = $chave."='".addslashes($valor)."'";
+			}
+			$sql = $sql.implode(",",$dados);
+
+			$this->pdo->query($sql);
+		}
+	}
 }
-
 ?>
