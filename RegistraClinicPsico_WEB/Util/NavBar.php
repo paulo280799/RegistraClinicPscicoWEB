@@ -1,32 +1,44 @@
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="Index.php">Principal <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="TelaPaciente.php">Paciente <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="TelaAluno.php">Aluno <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="TelaUsuario.php">Usuário <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item active">
-        <a class="nav-link" href="TelaSupervisor.php">Supervisor <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../css/styleMenu.css">
+<!---- MENU PRINCIPAL  ---->
+   <nav class="navbar navbar-expand-lg navbar-light" id="nav-menu">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#abrirMenuResponsivo" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" id="barra-menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="abrirMenuResponsivo">
+      <img src="../Imagens/logo.png" alt="logo" class="logo-menu">
+      <a class="navbar-brand" href="#" id="nome-logo">Registra Clinic Fisio</a>
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menu-opcoes">
+            <li class="nav-item active"  id="items-li">
+              <a class="nav-link" href="Index.php" id="items-a">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active" id="items-li">
+              <a class="nav-link" id="items-a">Cadastro<span class="sr-only">(current)</span></a>
+                <ul class="sub-menu">
+                  <li class="sub-menu-li"><a href="TelaPaciente.php">Paciente</a></li>
+                  <li class="sub-menu-li"><a href="TelaSupervisor.php">Supervisor</a></li>
+                  <li class="sub-menu-li"><a href="TelaUsuario.php">Usuario</a></li>
+                  <li class="sub-menu-li"><a href="TelaAluno.php">Aluno</a></li>
+                </ul>
+            </li>
+            <li class="nav-item active"  id="items-li">
+              <a class="nav-link" id="items-a">Atendimento<span class="sr-only">(current)</span></a>
+                 <ul class="sub-menu">
+                  <li class="sub-menu-li"><a>Agendar</a></li>
+                </ul>
+            </li>
+            <li class="nav-item active"  id="items-li">
+            </li>
+        </ul>
+    </div>
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav" id="menu-logado">
+             <li class="nav-item">
+                <span>Bem Vindo |</span>
+             </li>
+             <li class="nav-item">
+                
+             </li>
+        </ul>
+    </div>
+  </nav>
+<!---------------- FIM MENU PRINCIPAL  ------------>

@@ -18,11 +18,11 @@ $emailAluno= addslashes($_POST['emailAluno']);
 $complementoAluno= addslashes($_POST['complementoAluno']);
 $turmaAluno= addslashes($_POST['turmaAluno']);
 
-$banco = new Banco("localhost","teste","root","");
+$banco = new Banco("localhost","psico","root","");
 
-/*$banco->query("INSERT INTO aluno SET"."NOMEALUNO".$nomeAluno."MATRICULAALUNO".$matriculaAluno."CPFALUNO".$cpfAluno."RGALUNO".$rgAluno."SEXOALUNO".$sexoAluno."TELEFONEALUNO".$telefoneAluno."DATANASCIMENTOALUNO".$dataNascimentoAluno."ESTADOALUNO".$estadoAluno."CIDADEALUNO".$cidadeAluno."BAIRROALUNO".$bairroAluno."NUMCASAALUNO".$numCasaAluno."EMAILALUNO".$emailAluno."COMPLEMENTOALUNO".$complementoAluno."TURMAALUNO".$turmaAluno);*/
+try {
 
-$banco->insert("aluno", array(
+	$banco->insert("Aluno", array(
 	"NOMEALUNO"=>$nomeAluno,
 	"MATRICULAALUNO" =>$matriculaAluno,
 	"CPFALUNO"=>$cpfAluno,
@@ -40,4 +40,9 @@ $banco->insert("aluno", array(
 	"TURMAALUNO"=>$turmaAluno
 ));
 
+	echo "<script>alert('SALVO COM SUCESSO !!');window.location = '../telas/TelaAluno.php';</script>";
+	
+} catch (Exception $e) {
+	echo "<script>alert('ERRO AO SALVAR USUARIO!!')</script>";
+}
 ?>

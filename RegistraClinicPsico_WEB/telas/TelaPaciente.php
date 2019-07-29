@@ -150,6 +150,7 @@
 
         <button type="submit" value="cadastrar" class="btn btn-outline-success">ENVIAR</button>
         <button type="submit" class="btn btn-outline-success">LIMPAR</button>
+        <button type="submit" class="btn btn-outline-success">Pesquisar</button>
       </fieldset>  
     </form>   
   </div>

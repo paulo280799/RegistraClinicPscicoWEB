@@ -12,8 +12,7 @@
 </head>
 <body>
   <?php include_once '../Util/NavBar.php'; ?>
-  <br>
-  <br>
+
   <br>
 
   <div class="container">
@@ -109,13 +108,13 @@
 
         <button type="submit" value="cadastrar" class="btn btn-outline-success">ENVIAR</button>
         <button type="submit" class="btn btn-outline-success">LIMPAR</button>
+        <button type="submit" class="btn btn-outline-success">Pesquisar</button>
       </fieldset>  
     </form>   
   </div>
 
   <br>
-  <br>
-  <br>
+  
   <?php include_once '../Util/Footer.php'; ?>
 
   <!-- Optional JavaScript -->
