@@ -6,7 +6,7 @@
     </button>
     <div class="collapse navbar-collapse" id="abrirMenuResponsivo">
       <img src="../Imagens/logo.png" alt="logo" class="logo-menu">
-      <a class="navbar-brand" href="#" id="nome-logo">Registra Clinic Fisio</a>
+      <a class="navbar-brand" href="#" id="nome-logo">Registra Clinic Psico</a>
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menu-opcoes">
             <li class="nav-item active"  id="items-li">
               <a class="nav-link" href="Index.php" id="items-a">Home<span class="sr-only">(current)</span></a>
