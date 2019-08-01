@@ -1,4 +1,5 @@
-<?php  
+<?php 
+ 
 include_once '../Aluno/Aluno.php';
 require '../Banco/conexao.php';
 

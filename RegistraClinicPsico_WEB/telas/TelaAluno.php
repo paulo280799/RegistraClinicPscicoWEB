@@ -109,8 +109,8 @@
         <br>
 
         <button type="submit" value="cadastrar" class="btn btn-outline-success">ENVIAR</button>
-        <button type="submit" class="btn btn-outline-success">LIMPAR</button>
-        <button type="submit" class="btn btn-outline-success"><a href="TelaPesquisaAluno.php">Pesquisar</a></button>
+        <button type="reset" class="btn btn-outline-success">LIMPAR</button>
+        <button type="button" class="btn btn-outline-success"><a href="TelaPesquisaAluno.php">Pesquisar</a></button>
       </fieldset>  
     </form>   
   </div>

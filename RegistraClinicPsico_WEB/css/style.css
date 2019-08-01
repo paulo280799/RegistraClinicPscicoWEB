@@ -1,3 +1,8 @@
 a{
 	text-decoration: none;
 }
+.button{
+	margin-left: 20px;
+	padding-left: 20px;
+	background-color: red;
+}
