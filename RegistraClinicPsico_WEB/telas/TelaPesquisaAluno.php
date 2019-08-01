@@ -8,14 +8,16 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
 	<title>Pesquisa Aluno !</title>
 </head>
 <body>
 	<?php include_once '../Util/NavBar.php'; ?>
+	
+	<div class="table-responsive" style="margin-left: 20px; margin-top: 50px;"">
 
-	<div class="container-table">
-
-		<table class="table table-striped" id="tabelPAcientes">
+		<table class="table table-striped">
 			<caption>Lista de alunos cadastrados</caption>
 			<thead>
 				<tr>
@@ -46,8 +48,8 @@
 						<td><?php echo $aluno['TURMAALUNO']; ?></td>
 						<td>
 							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-secondary">Editar</button>
-								<button type="button" class="btn btn-secondary">Apagar</button>
+								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Deletar</button>
+								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Editar</button>
 							</div>
 						</td>
 					</tr>
@@ -66,20 +68,3 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-
-<?php  
-//require '../Banco/conexao.php';
-
-//$banco = new Banco("localhost","psico","root","");
-
-//$banco->query("SELECT NOMEALUNO , MATRICULAALUNO , CPFALUNO FROM  aluno");
-
-//foreach ($banco->result() as $aluno) {
-
-
-
-//	echo var_dump($aluno);
-
-//}
-
-?>

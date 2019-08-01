@@ -108,9 +108,14 @@
         <br>
         <br>
 
-        <button type="submit" value="cadastrar" class="btn btn-outline-success">ENVIAR</button>
-        <button type="reset" class="btn btn-outline-success">LIMPAR</button>
-        <button type="button" class="btn btn-outline-success"><a href="TelaPesquisaAluno.php">Pesquisar</a></button>
+        <button
+          type="submit" value="cadastrar" class="btn btn-outline-success" style="background-color: #26619c;color: white;">ENVIAR
+        </button>
+        <button type="reset" class="btn btn-outline-success" style="background-color: #26619c; color: white;">LIMPAR</button>
+        <button 
+          type="button" class="btn btn-outline-success"style="background-color: #26619c; color: white;">
+          <a href="TelaPesquisaAluno.php">Pesquisar</a>
+        </button>
       </fieldset>  
     </form>   
   </div>
