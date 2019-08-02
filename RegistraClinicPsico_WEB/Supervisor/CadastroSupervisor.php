@@ -1,5 +1,6 @@
 <?php  
 include_once '../Supervisor/Supervisor.php';
+require '../Banco/conexao.php';
 
 $nomeSupervisor = addslashes($_POST['nomeSupervisor']);
 $cpfSupervisor= addslashes($_POST['cpfSupervisor']);
@@ -39,6 +40,34 @@ $Supervisor->setComplementoSupervisor($complementoSupervisor);
 $Supervisor->setTurmaSupervisor($turmaSupervisor);
 $Supervisor->setEspecializacaoSupervisor($especializacaoSupervisor);
 
-echo var_dump($Supervisor);
+$banco = new Banco("localhost","psico","root","");
+
+try {
+
+	$banco->insert("supervisor", array(
+
+	"NOMESUPERVISOR"=>$nomeSupervisor,
+	"IDADESUPERVISOR"=>$dataNascimentoSupervisor,
+	"CPFSUPERVISOR" =>$cpfSupervisor,
+	"RGSUPERVISOR"=>$rgSupervisor,
+	"SEXOSUPERVISOR"=>$sexoSupervisor,
+	"TELEFONESUPERVISOR"=>$telefoneSupervisor,
+	"ESTADOSUPERVISOR"=>$estadoSupervisor,
+	"CIDADESUPERVISOR"=>$cidadeSupervisor,
+	"BAIRROSUPERVISOR"=>$bairroSupervisor,
+	"RUASUPERVISOR"=>$ruaSupervisor,
+	"ENDERECOSUPERVISOR"=>$numCasaSupervisor,
+	"COMPLEMENTOSUPERVISOR"=>$complementoSupervisor,
+	"EMAILSUPERVISOR"=>$emailSupervisor,
+	"TURMASUPERVISOR"=>$turmaSupervisor,
+	"ESPECIALIZACAO"=>$especializacaoSupervisor,
+
+));
+
+	echo "<script>alert('SALVO COM SUCESSO !!');window.location = '../telas/TelaPaciente.php';</script>";
+	
+} catch (Exception $e) {
+	echo "<script>alert('ERRO AO SALVAR PACIENTE!!')</script>";
+}
 
 ?>

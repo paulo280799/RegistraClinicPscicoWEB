@@ -23,10 +23,11 @@
 				<tr>
 					<th scope="col">#</th>
 					<th scope="col">Nome</th>
-					<th scope="col">Matricula</th>
 					<th scope="col">CPF</th>
+					<th scope="col">Telefone</th>
 					<th scope="col">Email</th>
 					<th scope="col">Turma</th>
+					<th scope="col">Especialização</th>
 					<th scope="col"> </th>
 				</tr>
 			</thead>
@@ -36,16 +37,17 @@
 
 				$banco = new Banco("localhost","psico","root","");
 
-				$banco->query("SELECT IDALUNO, NOMEALUNO , MATRICULAALUNO , CPFALUNO, EMAILALUNO, TURMAALUNO FROM  aluno");
+				$banco->query("SELECT * FROM  supervisor");
 
 				foreach ($banco->result() as $aluno): ?>
 					<tr>
 						<td><?php echo $aluno['IDALUNO']; ?></td>
-						<td><?php echo $aluno['NOMEALUNO']; ?></td>
-						<td><?php echo $aluno['MATRICULAALUNO']; ?></td>
-						<td><?php echo $aluno['CPFALUNO']; ?></td>
-						<td><?php echo $aluno['EMAILALUNO']; ?></td>
-						<td><?php echo $aluno['TURMAALUNO']; ?></td>
+						<td><?php echo $aluno['NOMESUPERVISOR']; ?></td>
+						<td><?php echo $aluno['CPFSUPERVISOR']; ?></td>
+						<td><?php echo $aluno['TELEFONESUPERVISOR']; ?></td>
+						<td><?php echo $aluno['EMAILSUPERVISOR']; ?></td>
+						<td><?php echo $aluno['TURMASUPERVISOR']; ?></td>
+						<td><?php echo $aluno['ESPECIALIZACAO']; ?></td>
 						<td>
 							<div class="btn-group" role="group" aria-label="Basic example">
 								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Deletar</button>

@@ -26,6 +26,9 @@
 					<th scope="col">CPF</th>
 					<th scope="col">Telefone</th>
 					<th scope="col">Cidade</th>
+					<th scope="col">Bairro</th>
+					<th scope="col">Rua</th>
+					<th scope="col">Endereço</th>
 					<th scope="col"> </th>
 				</tr>
 			</thead>
@@ -44,6 +47,9 @@
 						<td><?php echo $aluno['CPFPACIENTE']; ?></td>
 						<td><?php echo $aluno['TELEFONEPACIENTE']; ?></td>
 						<td><?php echo $aluno['CIDADEPACIENTE']; ?></td>						
+						<td><?php echo $aluno['BAIRROPACIENTE']; ?></td>
+						<td><?php echo $aluno['RUAPACIENTE']; ?></td>
+						<td><?php echo $aluno['ENDERECO']; ?></td>
 						<td>
 							<div class="btn-group" role="group" aria-label="Basic example">
 								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Deletar</button>

@@ -152,9 +152,15 @@
         <br>
         <br>
 
-        <button type="submit" value="cadastrar" class="btn btn-outline-success">ENVIAR</button>
-        <button type="reset" class="btn btn-outline-success">LIMPAR</button>
-        <a href="TelaPesquisaPaciente.php" class="btn btn-outline-success">Pesquisar</a>
+        <button 
+          type="submit" value="cadastrar" class="btn btn-outline-success" style="background-color: #26619c; color: white;">ENVIAR
+        </button>
+        <button
+         type="reset" class="btn btn-outline-success"style="background-color: #26619c; color: white;">LIMPAR
+        </button>
+        <a 
+          href="TelaPesquisaPaciente.php" class="btn btn-outline-success" style="background-color: #26619c; color: white;">Pesquisar
+        </a>
       </fieldset>  
     </form>   
   </div>
