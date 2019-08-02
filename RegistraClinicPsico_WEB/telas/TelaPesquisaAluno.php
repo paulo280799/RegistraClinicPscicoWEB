@@ -15,7 +15,7 @@
 <body>
 	<?php include_once '../Util/NavBar.php'; ?>
 	
-	<div class="table-responsive" style="margin-left: 20px; margin-top: 50px;"">
+	<div class="table-responsive" style="margin-left: 20px; margin-top: 50px;">
 
 		<table class="table table-striped">
 			<caption>Lista de alunos cadastrados</caption>
