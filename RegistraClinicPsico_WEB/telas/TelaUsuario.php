@@ -12,6 +12,47 @@
   </head>
   <body>
     <?php include_once '../Util/NavBar.php'; ?>
+
+    <div class="container">
+    <form action="../Usuario/CadastroUsuario.php" method="post">
+      <fieldset>
+        <legend class="fw" style="text-align: center;">Cadastro de Usuário</legend>
+        
+        <div class="row">
+        <div class="form-group col-sm-12">
+          <label id="nomeUsuario" class="fw">Nome:</label>
+          <input type="text" name="nomeUsuario" class="form-control" id="nomeUsuario">
+        </div>
+
+        <div class="form-group col-sm-4">
+          <label id="loginUsuario" class="fw">Login:</label>
+          <input type="text" name="loginUsuario" class="form-control" id="loginUsuario">
+        </div>
+
+        <div class="form-group col-sm-4">
+          <label id="senhaUsuario" class="fw">Senha:</label>
+          <input type="text" name="senhaUsuario" class="form-control" id="senhaUsuario">
+        </div>
+
+        <div class="form-group col-sm-4">
+          <label id="nivelUsuario" class="fw">Nível de acesso:</label>
+          <select name="nivelUsuario" class="form-control" id="nivelUsuario">
+            <option>Selecione</option>
+            <option value="Administrador">Administrador</option>
+            <option value="Funcionario">Funcionário</option>
+          </select>
+        </div>
+        </div>
+        <br>
+        <button type="submit" value="cadastrar" class="btn btn-outline-success">ENVIAR</button>
+        <button type="reset" class="btn btn-outline-success">LIMPAR</button>
+        <a href="TelaPesquisaUsuario.php" class="btn btn-outline-success">Pesquisar</a>
+
+
+      </fieldset>
+    </form>
+  </div>
+
     <?php include_once '../Util/Footer.php'; ?>
 
     <!-- Optional JavaScript -->
