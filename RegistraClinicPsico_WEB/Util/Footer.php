@@ -3,10 +3,10 @@
 
 
 <!-- Footer -->
-<footer class="page-footer font-small blue">
+<footer class="container-fluid font-small blue">
 
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">Fabrica de software© 2019 Copyright:
+  <div class="footer-copyright text-center py-3">Fábrica de software © 2019 Copyright:
     <a href="#"> fabricadesoft.com.br</a>
   </div>
   <!-- Copyright -->

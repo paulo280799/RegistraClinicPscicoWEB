@@ -31,4 +31,3 @@ try {
 } catch (Exception $e) {
 	echo "<script>alert('ERRO AO SALVAR USUÁRIO!!')</script>";
 }
-?>
