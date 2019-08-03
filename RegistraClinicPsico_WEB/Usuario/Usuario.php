@@ -25,4 +25,3 @@ class Usuario{
 	function setIdUsuario($idUsuario){$this->IdUsuario = $idUsuario;}
 
 }
-?>
