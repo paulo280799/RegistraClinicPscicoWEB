@@ -10,7 +10,7 @@
 
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 
-	<title>Pesquisa Aluno !</title>
+	<title>Pesquisa Aluno!</title>
 </head>
 <body>
 	<?php include_once '../Util/NavBar.php'; ?>

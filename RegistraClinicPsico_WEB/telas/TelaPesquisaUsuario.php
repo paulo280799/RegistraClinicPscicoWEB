@@ -23,10 +23,8 @@
 				<tr>
 					<th scope="col">#</th>
 					<th scope="col">Nome</th>
-					<th scope="col">Matricula</th>
-					<th scope="col">CPF</th>
-					<th scope="col">Email</th>
-					<th scope="col">Turma</th>
+					<th scope="col">Login</th>
+					<th scope="col">Nível</th>
 					<th scope="col"> </th>
 				</tr>
 			</thead>
@@ -36,20 +34,18 @@
 
 				$banco = new Banco("localhost","psico","root","");
 
-				$banco->query("SELECT IDALUNO, NOMEALUNO , MATRICULAALUNO , CPFALUNO, EMAILALUNO, TURMAALUNO FROM  aluno");
+				$banco->query("SELECT idUsuario, nomeUsuario, loginUsuario, tipoUsuario FROM usuario");
 
-				foreach ($banco->result() as $aluno): ?>
+				foreach ($banco->result() as $usuario): ?>
 					<tr>
-						<td><?php echo $aluno['IDALUNO']; ?></td>
-						<td><?php echo $aluno['NOMEALUNO']; ?></td>
-						<td><?php echo $aluno['MATRICULAALUNO']; ?></td>
-						<td><?php echo $aluno['CPFALUNO']; ?></td>
-						<td><?php echo $aluno['EMAILALUNO']; ?></td>
-						<td><?php echo $aluno['TURMAALUNO']; ?></td>
+						<td><?php echo $usuario['idUsuario']; ?></td>
+						<td><?php echo $usuario['nomeUsuario']; ?></td>
+						<td><?php echo $usuario['loginUsuario']; ?></td>
+						<td><?php echo $usuario['tipoUsuario']; ?></td>
 						<td>
 							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Deletar</button>
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Editar</button>
+								<a href="../Usuario/DeletarUsuario.php?deletar=<?php echo $usuario['idUsuario']; ?>" class="btn btn-secondary" style="background-color: #26619c">Deletar</a>
+								<a href="TelaUsuario.php?editar=<?php echo $usuario['idUsuario']; ?>" class="btn btn-secondary" style="background-color: #26619c">Editar</a>
 							</div>
 						</td>
 					</tr>

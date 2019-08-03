@@ -63,7 +63,7 @@ class Banco{
 	}
 	public function delete($table, $where, $where_cond = "AND"){
 		if (!empty($table) && ( is_array($where) && count($where)>0)) {
-			$sql = "DELETE FROM".$table;
+			$sql = "DELETE FROM ".$table;
 
 			if (count($where)>0) {
 				$dados = array( );

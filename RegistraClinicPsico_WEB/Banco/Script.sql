@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: 02-Ago-2019 às 12:03
+-- Generation Time: 03-Ago-2019 às 12:13
 -- Versão do servidor: 5.7.26
 -- versão do PHP: 7.2.18
 
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `psico`
 --
+CREATE DATABASE IF NOT EXISTS `psico` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `psico`;
 
 -- --------------------------------------------------------
 
@@ -89,24 +91,47 @@ CREATE TABLE IF NOT EXISTS `paciente` (
 
 DROP TABLE IF EXISTS `supervisor`;
 CREATE TABLE IF NOT EXISTS `supervisor` (
-  `IDSUPERVISOR` int(11) NOT NULL AUTO_INCREMENT,
-  `NOMESUPERVISOR` varchar(255) NOT NULL,
-  `IDADESUPERVISOR` int(11) NOT NULL,
-  `CPFSUPERVISOR` varchar(255) NOT NULL,
-  `RGSUPERVISOR` varchar(255) NOT NULL,
-  `SEXOSUPERVISOR` varchar(255) NOT NULL,
-  `TELEFONESUPERVISOR` varchar(255) NOT NULL,
-  `ESTADOSUPERVISOR` varchar(255) NOT NULL,
-  `CIDADESUPERVISOR` varchar(255) NOT NULL,
-  `BAIRROSUPERVISOR` varchar(255) NOT NULL,
-  `RUASUPERVISOR` varchar(255) NOT NULL,
-  `ENDERECOSUPERVISOR` varchar(255) NOT NULL,
-  `COMPLEMENTOSUPERVISOR` varchar(255) NOT NULL,
-  `EMAILSUPERVISOR` varchar(255) NOT NULL,
-  `TURMASUPERVISOR` varchar(255) NOT NULL,
-  `ESPECIALIZACAO` varchar(255) NOT NULL,
-  PRIMARY KEY (`IDSUPERVISOR`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `idSupervisor` int(11) NOT NULL AUTO_INCREMENT,
+  `bairroSupervisor` varchar(550) DEFAULT NULL,
+  `cidadeSupervisor` varchar(500) DEFAULT NULL,
+  `complementoSupervisor` varchar(300) DEFAULT NULL,
+  `cpfSupervisor` varchar(20) DEFAULT NULL,
+  `dataNascimentoSupervisor` varchar(15) DEFAULT NULL,
+  `emailSupervisor` varchar(50) DEFAULT NULL,
+  `enderecoNumeroSupervisor` varchar(16) DEFAULT NULL,
+  `enderecoSupervisor` varchar(550) DEFAULT NULL,
+  `especializacaoSupervisor` varchar(50) DEFAULT NULL,
+  `estadoSupervisor` varchar(20) DEFAULT NULL,
+  `nomeSupervisor` varchar(500) NOT NULL,
+  `rgSupervisor` varchar(50) DEFAULT NULL,
+  `sexoSupervisor` varchar(10) DEFAULT NULL,
+  `telefoneSupervisor` varchar(20) DEFAULT NULL,
+  `turmaSupervisor` varchar(40) DEFAULT NULL,
+  PRIMARY KEY (`idSupervisor`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+--
+-- Extraindo dados da tabela `supervisor`
+--
+
+INSERT INTO `supervisor` (`idSupervisor`, `bairroSupervisor`, `cidadeSupervisor`, `complementoSupervisor`, `cpfSupervisor`, `dataNascimentoSupervisor`, `emailSupervisor`, `enderecoNumeroSupervisor`, `enderecoSupervisor`, `especializacaoSupervisor`, `estadoSupervisor`, `nomeSupervisor`, `rgSupervisor`, `sexoSupervisor`, `telefoneSupervisor`, `turmaSupervisor`) VALUES
+(1, 'Centro', 'Pereiro', 'Casa', '123123123', '2019-08-02', 'dadasda@dadsa', '1234', 'RUa', 'Loucura', 'CearÃ¡', 'Danylo', '231231eqweq', 'M', '131231231231', 'Turma da quebrada');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura da tabela `usuario`
+--
+
+DROP TABLE IF EXISTS `usuario`;
+CREATE TABLE IF NOT EXISTS `usuario` (
+  `idUsuario` int(11) NOT NULL AUTO_INCREMENT,
+  `loginUsuario` varchar(255) DEFAULT NULL,
+  `nomeUsuario` varchar(255) DEFAULT NULL,
+  `senhaUsuario` varchar(255) DEFAULT NULL,
+  `tipoUsuario` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`idUsuario`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

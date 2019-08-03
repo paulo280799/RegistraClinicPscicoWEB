@@ -45,29 +45,26 @@ $banco = new Banco("localhost","psico","root","");
 try {
 
 	$banco->insert("supervisor", array(
-
-	"NOMESUPERVISOR"=>$nomeSupervisor,
-	"IDADESUPERVISOR"=>$dataNascimentoSupervisor,
-	"CPFSUPERVISOR" =>$cpfSupervisor,
-	"RGSUPERVISOR"=>$rgSupervisor,
-	"SEXOSUPERVISOR"=>$sexoSupervisor,
-	"TELEFONESUPERVISOR"=>$telefoneSupervisor,
-	"ESTADOSUPERVISOR"=>$estadoSupervisor,
-	"CIDADESUPERVISOR"=>$cidadeSupervisor,
-	"BAIRROSUPERVISOR"=>$bairroSupervisor,
-	"RUASUPERVISOR"=>$ruaSupervisor,
-	"ENDERECOSUPERVISOR"=>$numCasaSupervisor,
-	"COMPLEMENTOSUPERVISOR"=>$complementoSupervisor,
-	"EMAILSUPERVISOR"=>$emailSupervisor,
-	"TURMASUPERVISOR"=>$turmaSupervisor,
-	"ESPECIALIZACAO"=>$especializacaoSupervisor,
-
+	"bairroSupervisor"=>$bairroSupervisor,
+	"cidadeSupervisor"=>$cidadeSupervisor,
+	"complementoSupervisor" =>$complementoSupervisor,
+    "cpfSupervisor"=>$cpfSupervisor,
+    "dataNascimentoSupervisor"=>$dataNascimentoSupervisor,
+    "emailSupervisor"=>$emailSupervisor,
+    "enderecoNumeroSupervisor"=>$numCasaSupervisor,
+    "enderecoSupervisor"=>$ruaSupervisor,
+    "especializacaoSupervisor"=>$especializacaoSupervisor,
+    "estadoSupervisor"=>$estadoSupervisor,
+    "nomeSupervisor"=>$nomeSupervisor,
+    "rgSupervisor"=>$rgSupervisor,
+    "sexoSupervisor"=>$sexoSupervisor,
+    "telefoneSupervisor"=>$telefoneSupervisor,
+    "turmaSupervisor"=>$turmaSupervisor
 ));
 
-	echo "<script>alert('SALVO COM SUCESSO !!');window.location = '../telas/TelaPaciente.php';</script>";
+	echo "<script>alert('SALVO COM SUCESSO !!');window.location = '../telas/TelaSupervisor.php';</script>";
 	
 } catch (Exception $e) {
-	echo "<script>alert('ERRO AO SALVAR PACIENTE!!')</script>";
+	echo "<script>alert('ERRO AO SALVAR SUPERVISOR!!')</script>";
 }
-
 ?>

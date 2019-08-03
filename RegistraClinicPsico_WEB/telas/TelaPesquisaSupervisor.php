@@ -23,12 +23,10 @@
 				<tr>
 					<th scope="col">#</th>
 					<th scope="col">Nome</th>
-					<th scope="col">CPF</th>
-					<th scope="col">Telefone</th>
-					<th scope="col">Email</th>
+					<th scope="col">Cidade</th>
 					<th scope="col">Turma</th>
 					<th scope="col">Especialização</th>
-					<th scope="col"> </th>
+					<th scope="col"></th>
 				</tr>
 			</thead>
 			<tbody>
@@ -39,19 +37,17 @@
 
 				$banco->query("SELECT * FROM  supervisor");
 
-				foreach ($banco->result() as $aluno): ?>
+				foreach ($banco->result() as $supervisor): ?>
 					<tr>
-						<td><?php echo $aluno['IDALUNO']; ?></td>
-						<td><?php echo $aluno['NOMESUPERVISOR']; ?></td>
-						<td><?php echo $aluno['CPFSUPERVISOR']; ?></td>
-						<td><?php echo $aluno['TELEFONESUPERVISOR']; ?></td>
-						<td><?php echo $aluno['EMAILSUPERVISOR']; ?></td>
-						<td><?php echo $aluno['TURMASUPERVISOR']; ?></td>
-						<td><?php echo $aluno['ESPECIALIZACAO']; ?></td>
+						<td><?php echo $supervisor['idSupervisor']; ?></td>
+						<td><?php echo $supervisor['nomeSupervisor']; ?></td>
+						<td><?php echo $supervisor['cidadeSupervisor']; ?></td>
+						<td><?php echo $supervisor['turmaSupervisor']; ?></td>
+						<td><?php echo $supervisor['especializacaoSupervisor']; ?></td>
 						<td>
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Deletar</button>
+							<div class="btn-group" role="group" aria-label="Basic example">								
 								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Editar</button>
+								<button type="button" class="btn btn-danger">Deletar</button>
 							</div>
 						</td>
 					</tr>
