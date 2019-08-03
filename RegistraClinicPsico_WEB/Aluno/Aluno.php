@@ -2,6 +2,8 @@
 
 class Aluno{
 
+	private $idAluno;
+
 	private $nomeAluno;
 	private $matriculaAluno;
 	private $cpfAluno;
@@ -20,6 +22,10 @@ class Aluno{
 	private $emailAluno;
 	private $complementoAluno;
 	private $turmaAluno;
+
+
+	function getIDAluno(){return $this->idAluno;}
+	function setIDAluno($IDAluno){$this->idAluno = $IDAluno;}
 
 	function getNomeAluno(){return $this->nomeAluno;}
 	function setNomeAluno($NomeAluno){$this->nomeAluno = $NomeAluno;}
