@@ -45,6 +45,7 @@
 						<td>
 							<div class="btn-group" role="group" aria-label="Basic example">
 								<a href="../Usuario/DeletarUsuario.php?deletar=<?php echo $usuario['idUsuario']; ?>" class="btn btn-secondary" style="background-color: #26619c">Deletar</a>
+								
 								<a href="TelaUsuario.php?editar=<?php echo $usuario['idUsuario']; ?>" class="btn btn-secondary" style="background-color: #26619c">Editar</a>
 							</div>
 						</td>

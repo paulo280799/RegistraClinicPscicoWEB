@@ -2,6 +2,8 @@
 
 class Paciente{
 
+    private $idPaciente;
+
 	private $nomePaciente;
 	private $idadePaciente;
 	private $cpfPaciete;
@@ -24,6 +26,9 @@ class Paciente{
 	private $setorDeEncaminhamento;
 	private $contrarreferencia;
 	private $outros;
+
+    function setIDPaciente($IdPaciente){$this->idPaciente = $IdPaciente;}
+    function getIDPaciente(){return $this->idPaciente;}
 
  	function setNome($NomePaciente){$this->nomePaciente = $NomePaciente;}
     function getNome(){return $this->nomePaciente;}

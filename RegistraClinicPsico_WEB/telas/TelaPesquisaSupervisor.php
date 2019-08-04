@@ -46,7 +46,12 @@
 						<td><?php echo $supervisor['especializacaoSupervisor']; ?></td>
 						<td>
 							<div class="btn-group" role="group" aria-label="Basic example">								
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Editar</button>
+								<a 
+									href="../Supervisor/DeletarSupervisor.php?deletar=<?php echo $supervisor['idSupervisor']; ?>" 
+									class="btn btn-secondary" 
+									style="background-color: #26619c">
+									Deletar
+								</a>
 								<button type="button" class="btn btn-danger">Deletar</button>
 							</div>
 						</td>

@@ -2,6 +2,8 @@
 
 class Supervisor{
 
+	private $idSupervisor;
+
 	private $nomeSupervisor;
 	private $cpfSupervisor;
 	private $rgSupervisor;
@@ -20,6 +22,8 @@ class Supervisor{
 	private $complementoSupervisor;
 	private $turmaSupervisor;
 	private $especializacaoSupervisor;
+
+	function setIDSupervisor($IdSpuervisor){$this->idSupervisor = $IdSpuervisor;}
 
 	function getNomeSupervisor(){return $this->nomeSupervisor;}
 	function setNomeSupervisor($NomeSupervisor){$this->nomeSupervisor = $NomeSupervisor;}

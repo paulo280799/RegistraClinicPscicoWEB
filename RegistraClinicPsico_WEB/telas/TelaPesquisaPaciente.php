@@ -46,8 +46,13 @@
 						<td><?php echo $paciente['CIDADEPACIENTE']; ?></td>						
 						<td>
 							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Deletar</button>
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Editar</button>
+								<a 
+									href="../Paciente/DeletarPaciente.php?deletar=<?php echo $paciente['IDPACIENTE']; ?>" 
+									class="btn btn-secondary" 
+									style="background-color: #26619c">
+									Deletar
+								</a>
+								
 							</div>
 						</td>
 					</tr>

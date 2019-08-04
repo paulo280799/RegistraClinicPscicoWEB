@@ -14,11 +14,7 @@
 
 <body>
   <?php include_once '../Util/NavBar.php'; ?>
-  <div class="container">
-    <p>Bem vindo <?php echo $_SESSION['nomeUsuario']; ?></p>
-
-    <br>
-    <h2>Registra Clinica Psicologia</h2>
+  
     
   </div>
 

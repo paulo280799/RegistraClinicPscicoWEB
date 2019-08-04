@@ -12,7 +12,7 @@ if(!isset($_SESSION['idUsuario'])){
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="abrirMenuResponsivo">
-    <img src="../Imagens/logo.png" alt="logo" class="logo-menu">
+    <img src="../Util/Imagens/LogoPsico.png" alt="logo" class="logo-menu">
     <a class="navbar-brand" href="#" id="nome-logo">Registra Clinic Psico</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menu-opcoes">
       <li class="nav-item active" id="items-li">
@@ -40,7 +40,7 @@ if(!isset($_SESSION['idUsuario'])){
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav" id="menu-logado">
       <li class="nav-item">
-        <span><?php echo $_SESSION['loginUsuario']; ?></span>
+        <span><?php echo"Bem vindo ". $_SESSION['nomeUsuario']; ?></span>
       </li>
       <li class="nav-item">
       </li>
