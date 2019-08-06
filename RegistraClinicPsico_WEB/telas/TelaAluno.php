@@ -14,61 +14,55 @@
 </head>
 <body>
   <?php include_once '../Util/NavBar.php'; ?>
-  <?php require_once '../Aluno/EditarAluno.php'; ?>
 
   <br>
 
   <div class="container">
-
-    <?php if(isset($_GET['editar'])):?>
-    <form action="../Aluno/EditarAluno.php" method="post">
-    <?php else: ?>
     <form action="../Aluno/CadastroAluno.php" method="post">
-    <?php endif; ?>
-    
       <fieldset>
         <legend class="fw" style="text-align: center;">Cadastro de Aluno</legend>
-        <input type="hidden" name="idAluno" value="<?php echo $idAluno; ?>">
+        
         <div class="row">
         <div class="form-group col-sm-8">
           <label id="nomeAluno" class="fw">Nome:</label>
-          <input type="text" name="nomeAluno"  value="<?php echo $nomeAluno; ?> "class="form-control" id="nomeAluno">
+          <input type="text" name="nomeAluno" class="form-control" id="nomeAluno">
         </div>
 
         <div class="form-group col-sm-4">
           <label id="matriculaAluno" class="fw">Matricula:</label>
-          <input type="text" name="matriculaAluno" value="<?php echo $matriculaAluno; ?>" class="form-control" id="matriculaAluno">
+          <input type="text" name="matriculaAluno" class="form-control" id="matriculaAluno">
         </div>
 
         <div class="form-group col-sm-6">
           <label id="cpfAluno" class="fw">CPF:</label>
-          <input type="text" name="cpfAluno" value="<?php echo $cpfAluno; ?> "class="form-control" id="cpfAluno">
+          <input type="text" name="cpfAluno" class="form-control" id="cpfAluno">
         </div>
 
         <div class="form-group col-sm-6">
           <label id="rgAluno" class="fw">RG:</label>
-          <input type="text" name="rgAluno"  value="<?php echo $rgAluno; ?> "class="form-control" id="rgAluno">
+          <input type="text" name="rgAluno" class="form-control" id="rgAluno">
         </div>
         
-        
         <div class="form-group col-sm-4">
-          <label id="sexoAluno" class="fw">Sexo Aluno:</label>
-          <select name="sexoAluno" class="form-control" id="sexoAluno">
-            <option value="<?php echo $sexoAluno; ?>"><?php echo $sexoAluno; ?></option>
-            <option value="Masculino">Masculino</option>
-            <option value="Feminino">Feminino</option>
-            <option value="Outros">Outros</option>
-          </select>
+          <label style="margin-right: 5px;" class="fw">Sexo:</label>
+          <div class="form-group form-check-inline">
+            <input type="radio" class="form-check-input" name="sexoAluno" value="M" id="masc" >
+            <label class="form-check-input" for="masc">Masculino</label>
+          </div>
+          <div class="form-group form-check-inline">
+            <input type="radio" class="form-check-input" name="sexoAluno" value="F" id="femi">
+            <label class="form-check-input" for="femi">Feminino</label>
+          </div>
         </div>
 
         <div class="form-group col-sm-3">
           <label id="dataNascimentoAluno" class="fw">Data de Nascimento:</label>
-          <input type="date" name="dataNascimentoAluno" value="<?php echo $dataNascimentoAluno; ?> "class="form-control" id="dataNascimentoAluno">
+          <input type="date" name="dataNascimentoAluno" class="form-control" id="dataNascimentoAluno">
         </div>
 
         <div class="form-group col-sm-5">
           <label id="telefone" class="fw">Telefone:</label>
-          <input type="text" name="telefoneAluno" value="<?php echo $telefoneAluno; ?>" class="form-control" id="telefone" >
+          <input type="text" name="telefoneAluno" class="form-control" id="telefone" >
         </div>
 
         </div>
@@ -76,33 +70,33 @@
         <div class="row">        
         <div class="form-group col-sm-4">
           <label id="estadoAluno" class="fw">Estado:</label>
-          <input type="text" name="estadoAluno" value="<?php echo $estadoAluno; ?>" class="form-control" id="estadoAluno" >
+          <input type="text" name="estadoAluno" class="form-control" id="estadoAluno" >
         </div>
 
         <div class="form-group col-sm-6">
           <label id="cidadeAluno" class="fw">Cidade:</label>
-          <input type="text" name="cidadeAluno" value="<?php echo $cidadeAluno; ?>" class="form-control" id="cidadeAluno" >
+          <input type="text" name="cidadeAluno" class="form-control" id="cidadeAluno" >
         </div>
 
         <div class="form-group col-sm-2">
           <label id="numCasaAluno" class="fw">Numero da casa:</label>
-          <input type="number" name="numCasaAluno" value="<?php echo $numCasaAluno; ?> "class="form-control" id="numCasaAluno" >
+          <input type="number" name="numCasaAluno" class="form-control" id="numCasaAluno" >
         </div>
 
         <div class="form-group col-sm-6">
           <label id="ruaAluno" class="fw">Rua:</label>
-          <input type="text" name="ruaAluno" value="<?php echo $ruaAluno; ?> "class="form-control" id="ruaAluno" >
+          <input type="text" name="ruaAluno" class="form-control" id="ruaAluno" >
         </div>        
 
         <div class="form-group col-sm-4">
           <label id="bairroAluno" class="fw">Bairro:</label>
-          <input type="text" name="bairroAluno" value="<?php echo $bairroAluno; ?>" class="form-control" id="bairroAluno">
+          <input type="text" name="bairroAluno" class="form-control" id="bairroAluno">
         </div>
 
         
         <div class="form-group col-sm-2">
           <label id="complementoAluno" class="fw">Complemento:</label>
-          <input type="text" name="complementoAluno" value="<?php echo $complementoAluno; ?>" class="form-control" id="complementoAluno" >
+          <input type="text" name="complementoAluno" class="form-control" id="complementoAluno" >
         </div>
 
         </div>
@@ -110,12 +104,12 @@
         <div class="row">
         <div class="form-group col-sm-6">
           <label id="emailAluno" class="fw">Email:</label>
-          <input type="email" name="emailAluno"  value="<?php echo $emailAluno; ?>" class="form-control" id="emailAluno" >
+          <input type="email" name="emailAluno" class="form-control" id="emailAluno" >
         </div>
 
         <div class="form-group col-sm-6">
           <label id="turmaAluno" class="fw">Turma do Aluno:</label>
-          <input type="text" name="turmaAluno"  value="<?php echo $turmaAluno; ?>" class="form-control" id="turmaAluno" >
+          <input type="text" name="turmaAluno" class="form-control" id="turmaAluno" >
         </div>
 
         </div>
@@ -124,31 +118,11 @@
         <br>
         <br>
 
-        <?php if(isset($_GET['editar'])):?>
-          <button 
-            type="submit" name="atualizar" value="atualizar" class="btn btn-outline-primary"  
-            style="background-color: #26619c; color: white;">
-            Atualizar
-          </button>
-        <?php else : ?>
-          <button 
-            type="submit" name="cadastrar" value="cadastrar" class="btn btn-outline-success"
-            style="background-color: #26619c; color: white;">
-            Salvar
-          </button>
-        <?php endif; ?>
-
-        <button 
-          type="reset" class="btn btn-outline-success" 
-          style="background-color: #26619c; color: white;">
-          Limpar
+        <button
+          type="submit" value="cadastrar" class="btn btn-outline-success" style="background-color: #26619c;color: white;">ENVIAR
         </button>
-        <a 
-          href="TelaPesquisaAluno.php" class="btn btn-outline-success"
-          style="background-color: #26619c; color: white;">
-          Pesquisar
-        </a>
-        
+        <button type="reset" class="btn btn-outline-success" style="background-color: #26619c; color: white;">LIMPAR</button>
+        <a href="TelaPesquisaAluno.php" class="btn btn-outline-success"style="background-color: #26619c; color: white;">Pesquisar</a>
       </fieldset>  
     </form>   
   </div>

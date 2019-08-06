@@ -54,12 +54,7 @@
 									style="background-color: #26619c">
 									Deletar
 								</a>
-								<a
-									href="TelaAluno.php?editar=<?php echo $aluno['IDALUNO']; ?>" 
-									class="btn btn-secondary" 
-									style="background-color: #26619c">
-									Editar
-								</a>
+								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Editar</button>
 							</div>
 						</td>
 					</tr>
