@@ -45,10 +45,36 @@
 						<td><?php echo $paciente['TELEFONEPACIENTE']; ?></td>
 						<td><?php echo $paciente['CIDADEPACIENTE']; ?></td>						
 						<td>
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Deletar</button>
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Editar</button>
-							</div>
+							<a href="../telas/TelaPaciente.php?editar=<?php echo $paciente['IDPACIENTE']; ?>" 
+								class="btn btn-primary" style="background-color: #26619c">Editar
+							</a>
+							
+							<button 
+								type="submit" class="btn btn-danger" 
+								data-toggle="modal" 
+								data-target="#excluir<?php echo $paciente['IDPACIENTE']; ?>">
+								Excluir
+							</button>
+							<div 
+								class="modal fade" 
+								id="excluir<?php echo $paciente['IDPACIENTE']; ?>" 
+								tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-body">
+											<p>Você realmente deseja excluir 
+												<strong><?php echo $paciente['NOMEPACIENTE']; ?></strong>?
+										</div>
+										<div class="modal-footer">
+											<a href="../Paciente/DeletarPaciente.php?deletar=<?php 
+											echo $paciente['IDPACIENTE']; ?>" 
+												class="btn btn-danger">
+												Excluir
+											</a>
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
+										</div>
+									</div>
+								</div>
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -58,6 +84,9 @@
 	</div>
 
 	<?php include_once '../Util/Footer.php'; ?>
+	<script>
+		$('#myModal').modal('show')
+	</script>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -32,7 +32,7 @@
         <div class="row">
         <div class="form-group col-sm-8">
           <label id="nomeAluno" class="fw">Nome:</label>
-          <input type="text" name="nomeAluno"  value="<?php echo $nomeAluno; ?> "class="form-control" id="nomeAluno">
+          <input type="text" name="nomeAluno"  value="<?php echo $nomeAluno; ?> " class="form-control" id="nomeAluno">
         </div>
 
         <div class="form-group col-sm-4">

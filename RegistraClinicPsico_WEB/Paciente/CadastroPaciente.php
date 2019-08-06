@@ -6,49 +6,49 @@ $nomePaciente = addslashes($_POST['nomePaciente']);
 $idadePaciente = addslashes($_POST['idadePaciente']);
 $cpfPaciente = addslashes($_POST['cpfPaciente']);
 $rgPaciente = addslashes($_POST['rgPaciente']);
-$sexo = addslashes($_POST['sexo']);
-$telefone = addslashes($_POST['telefone']);
-$telefoneOpcional = addslashes($_POST['telefoneOpcional']);
+$sexoPaciente = addslashes($_POST['sexoPaciente']);
+$telefonePaciente = addslashes($_POST['telefonePaciente']);
+$telefoneOpcionalPaciente = addslashes($_POST['telefoneOpcionalPaciente']);
 $estadoCivil = addslashes($_POST['estadoCivil']);
 
-$cidade = addslashes($_POST['cidade']);
-$bairro = addslashes($_POST['bairro']);
-$rua = addslashes($_POST['rua']);
-$numCasa = addslashes($_POST['numCasa']);
+$cidadePaciente = addslashes($_POST['cidade']);
+$bairroPaciente = addslashes($_POST['bairro']);
+$ruaPaciente = addslashes($_POST['rua']);
+$endereco = addslashes($_POST['numCasa']);
 
 $responsavel = addslashes($_POST['responsavel']);
-$situacao = addslashes($_POST['situacao']);
+$situaçãoPaciente = addslashes($_POST['situacao']);
 $tipoPaciente = addslashes($_POST['tipoPaciente']);
-$queixaPrincipal = addslashes($_POST['queixaPrincipal']);
+$queixaPricipal = addslashes($_POST['queixaPrincipal']);
 $disponibilidade = addslashes($_POST['disponibilidade']);
-$setorEncaminhado = addslashes($_POST['setorEncaminhado']);
-$contrareferencia = addslashes($_POST['contrareferencia']);
+$setorDeEncaminhamento = addslashes($_POST['setorEncaminhado']);
+$contrarreferencia = addslashes($_POST['contrareferencia']);
 $outros = addslashes($_POST['outros']);
 
 $Paciente = new Paciente();
 
 $Paciente->setNome($nomePaciente);
-$Paciente->setDataNasc($idadePaciente);
-$Paciente->setCpf($cpfPaciente);
-$Paciente->setRg($rgPaciente);
-$Paciente->setSexo($sexo);
-$Paciente->setTelefone($telefone);
-$Paciente->setTelefoneOpcional($telefoneOpcional);
-$Paciente->setEstadoCivil($estadoCivil);
+	$Paciente->setDataNasc($idadePaciente);
+	$Paciente->setCpf($cpfPaciente);
+	$Paciente->setRg($rgPaciente);
+	$Paciente->setSexo($sexoPaciente);
+	$Paciente->setTelefone($telefonePaciente);
+	$Paciente->setTelefoneOpcional($telefoneOpcionalPaciente);
+	$Paciente->setEstadoCivil($estadoCivil);
 
-$Paciente->setCidade($cidade);
-$Paciente->setBairro($bairro);
-$Paciente->setRua($rua);
-$Paciente->setEndereco($numCasa);
+	$Paciente->setCidade($cidadePaciente);
+	$Paciente->setBairro($bairroPaciente);
+	$Paciente->setRua($ruaPaciente);
+	$Paciente->setEndereco($endereco);
 
-$Paciente->setResponsavel($responsavel);
-$Paciente->setSituacaoPaciente($situacao);
-$Paciente->setTipoPaciente($tipoPaciente);
-$Paciente->setQueixa($queixaPrincipal);
-$Paciente->setDisponibilidade($disponibilidade);
-$Paciente->setSetorEncaminhamento($setorEncaminhado);
-$Paciente->setContraReferencia($contrareferencia);
-$Paciente->setOutros($outros);
+	$Paciente->setResponsavel($responsavel);
+	$Paciente->setSituacaoPaciente($situaçãoPaciente);
+	$Paciente->setTipoPaciente($tipoPaciente);
+	$Paciente->setQueixa($queixaPricipal);
+	$Paciente->setDisponibilidade($disponibilidade);
+	$Paciente->setSetorEncaminhamento($setorDeEncaminhamento);
+	$Paciente->setContraReferencia($contrarreferencia);
+	$Paciente->setOutros($outros);
 
 $banco = new Banco("localhost","psico","root","");
 
@@ -59,25 +59,26 @@ try {
 	"IDADEPACIENTE"=>$idadePaciente,
 	"CPFPACIENTE" =>$cpfPaciente,
 	"RGPACIENTE"=>$rgPaciente,
-	"SEXOPACIENTE"=>$sexo,
-	"TELEFONEPACIENTE"=>$telefone,
-	"TELEFONEOPCIONALPACIENTE"=>$telefoneOpcional,
+	"SEXOPACIENTE"=>$sexoPaciente,
+	"TELEFONEPACIENTE"=>$telefonePaciente,
+	"TELEFONEOPCIONALPACIENTE"=>$telefoneOpcionalPaciente,
 	"ESTADOCIVIL"=>$estadoCivil,
-	"CIDADEPACIENTE"=>$cidade,
-	"BAIRROPACIENTE"=>$bairro,
-	"RUAPACIENTE"=>$rua,
-	"ENDERECO"=>$numCasa,
+	"CIDADEPACIENTE"=>$cidadePaciente,
+	"BAIRROPACIENTE"=>$bairroPaciente,
+	"RUAPACIENTE"=>$ruaPaciente,
+	"ENDERECO"=>$endereco,
 	"RESPONSAVEL"=>$responsavel,
-	"SITUACAOPACIENTE"=>$situacao,
+	"SITUACAOPACIENTE"=>$situaçãoPaciente,
 	"TIPOPACIENTE"=>$tipoPaciente,
-	"QUEIXAPRINCIPAL"=>$queixaPrincipal,
+	"QUEIXAPRINCIPAL"=>$queixaPricipal,
 	"DISPONIBILIDADE"=>$disponibilidade,
-	"SETORDEENCAMINHAMENTO"=>$setorEncaminhado,
-	"CONTRARREFERENCIA"=>$contrareferencia,
+	"SETORDEENCAMINHAMENTO"=>$setorDeEncaminhamento,
+	"CONTRARREFERENCIA"=>$contrarreferencia,
 	"OUTROS"=>$outros
 ));
 
 	echo "<script>alert('SALVO COM SUCESSO !!');window.location = '../telas/TelaPaciente.php';</script>";
+
 	
 } catch (Exception $e) {
 	echo "<script>alert('ERRO AO SALVAR PACIENTE!!')</script>";

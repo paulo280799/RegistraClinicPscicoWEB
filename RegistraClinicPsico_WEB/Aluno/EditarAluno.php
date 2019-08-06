@@ -1,5 +1,6 @@
 <?php
-$id = 0;
+
+$idAluno = 0;
 $nomeAluno = "";
 $matriculaAluno = "";
 $cpfAluno = "";
@@ -20,9 +21,10 @@ if (isset($_GET['editar'])) {
     require '../Banco/conexao.php';
     $id = $_GET['editar'];
     $banco = new Banco("localhost", "psico", "root", "");
-    $banco->query("SELECT * FROM aluno WHERE IDALUNO=$id");
-    
+    $banco->query("SELECT * FROM aluno WHERE IDALUNO=$idAluno");
+
     foreach ($banco->result() as $resultado) {
+        
         $idAluno = $resultado['IDALUNO'];
         $nomeAluno = $resultado['NOMEALUNO'];
         $matriculaAluno = $resultado['MATRICULAALUNO'];
@@ -43,8 +45,10 @@ if (isset($_GET['editar'])) {
     }
 }
 if (isset($_POST['atualizar'])) {
+
     require '../Banco/conexao.php';
     require_once 'Aluno.php';
+
     $idAluno  = addslashes($_POST['idAluno']);
     $nomeAluno = addslashes($_POST['nomeAluno']);
     $matriculaAluno= addslashes($_POST['matriculaAluno']);
@@ -61,7 +65,9 @@ if (isset($_POST['atualizar'])) {
     $emailAluno= addslashes($_POST['emailAluno']);
     $complementoAluno= addslashes($_POST['complementoAluno']);
     $turmaAluno= addslashes($_POST['turmaAluno']);
+
     $Aluno = new Aluno();
+
     $Aluno->setIDAluno($idAluno);
     $Aluno->setNomeAluno($nomeAluno);
     $Aluno->setMatriculaAluno($matriculaAluno);
@@ -98,6 +104,7 @@ if (isset($_POST['atualizar'])) {
             "TURMAALUNO"=>$turmaAluno
         ), array("IDALUNO" => $idAluno));
         echo "<script>alert('EDITADO COM SUCESSO !!');";
+        //window.location = '../telas/TelaAluno.php';</script>
         
     } catch (Exception $e) {
         echo "<script>alert('ERRO AO EDITAR USUÁRIO!!')</script>";
