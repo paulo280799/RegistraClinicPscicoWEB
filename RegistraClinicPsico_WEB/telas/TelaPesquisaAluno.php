@@ -47,15 +47,34 @@
 						<td><?php echo $aluno['EMAILALUNO']; ?></td>
 						<td><?php echo $aluno['TURMAALUNO']; ?></td>
 						<td>
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<a 
-									href="../Aluno/DeletarAluno.php?deletar=<?php echo $aluno['IDALUNO']; ?>" 
-									class="btn btn-secondary" 
-									style="background-color: #26619c">
-									Deletar
-								</a>
-								<button type="button" class="btn btn-secondary" style="background-color: #26619c">Editar</button>
-							</div>
+							<a href="../telas/TelaAluno.php?editar=<?php echo $aluno['IDALUNO']; ?>" 
+								class="btn btn-primary" style="background-color: #26619c">Editar
+							</a>
+							<button 
+								type="submit" class="btn btn-danger" 
+								data-toggle="modal" 
+								data-target="#excluir<?php echo $aluno['IDALUNO']; ?>">
+								Excluir
+							</button>
+							<div 
+								class="modal fade" 
+								id="excluir<?php echo $aluno['IDALUNO']; ?>" 
+								tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-body">
+											<p>Você realmente deseja excluir 
+												<strong><?php echo $aluno['NOMEALUNO']; ?></strong>?
+										</div>
+										<div class="modal-footer">
+											<a href="../Aluno/DeletarAluno.php?deletar=<?php echo $aluno['IDALUNO']; ?>" 
+												class="btn btn-danger">
+												Excluir
+											</a>
+											<button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
+										</div>
+									</div>
+								</div>
 						</td>
 					</tr>
 				<?php endforeach; ?>
@@ -65,6 +84,9 @@
 	</div>
 
 	<?php include_once '../Util/Footer.php'; ?>
+	<script>
+		$('#myModal').modal('show')
+	</script>
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
