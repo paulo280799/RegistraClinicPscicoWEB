@@ -26,11 +26,12 @@ if(!isset($_SESSION['idUsuario'])){
           <li class="sub-menu-li"><a href="TelaUsuario.php">Usuario</a></li>
           <li class="sub-menu-li"><a href="TelaAluno.php">Aluno</a></li>
         </ul>
-      </li>
+      </li>      
       <li class="nav-item active" id="items-li">
-        <a class="nav-link" id="items-a">Atendimento<span class="sr-only">(current)</span></a>
+        <a class="nav-link" id="items-a">Atendimento</a>
         <ul class="sub-menu">
-          <li class="sub-menu-li"><a>Agendar</a></li>
+          <li class="sub-menu-li"><a href="../telas/TelaAlunoSupervisor.php">Aluno - Supervisor</a></li>
+          <li class="sub-menu-li"><a href="../telas/TelaAlunoPaciente.php">Aluno - Paciente</a></li>
         </ul>
       </li>
       <li class="nav-item active" id="items-li">
