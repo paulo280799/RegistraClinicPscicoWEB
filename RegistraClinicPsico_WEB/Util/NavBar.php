@@ -1,10 +1,3 @@
-<?php 
-session_start();
-
-if(!isset($_SESSION['idUsuario'])){
-  header("Location: ../Autenticacao/DeslogarUsuario.php");
-}
-?>
 <link rel="stylesheet" href="../css/styleMenu.css">
 <!---- MENU PRINCIPAL  ---->
 <nav class="navbar navbar-expand-lg navbar-light" id="nav-menu">
@@ -25,31 +18,46 @@ if(!isset($_SESSION['idUsuario'])){
           <li class="sub-menu-li"><a href="TelaSupervisor.php">Supervisor</a></li>
           <li class="sub-menu-li"><a href="TelaUsuario.php">Usuario</a></li>
           <li class="sub-menu-li"><a href="TelaAluno.php">Aluno</a></li>
+          <li class="nav-item active"  id="items-li">
+            <a class="nav-link" id="items-a">Atendimento<span class="sr-only">(current)</span></a>
+            <ul class="sub-menu">
+              <li class="sub-menu-li"><a>Agendar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item active"  id="items-li">
+          </li>
         </ul>
-      </li>
-      <li class="nav-item active" id="items-li">
-        <a class="nav-link" id="items-a">Atendimento<span class="sr-only">(current)</span></a>
-        <ul class="sub-menu">
-          <li class="sub-menu-li"><a>Agendar</a></li>
-        </ul>
-      </li>
-      <li class="nav-item active" id="items-li">
-      </li>
-    </ul>
-  </div>
-  <div class="collapse navbar-collapse">
-    <ul class="navbar-nav" id="menu-logado">
-      <li class="nav-item">
-        <span><?php echo"Bem vindo ". $_SESSION['nomeUsuario']; ?></span>
-      </li>
-      <li class="nav-item">
-      </li>
-    </ul>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menu-opcoes">
-      <li class="nav-item" id="items-li">
-        <a class="nav-link" href="../Autenticacao/DeslogarUsuario.php" id="items-a">Sair <span class="glyphicon glyphicon-log-out"></span></a>
-      </li>
-    </ul>
-  </div>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav" id="menu-logado">
+         <li class="nav-item">
+          <span>Bem Vindo |</span>
+        </li>
+        <li class="nav-item">
+
+        </li>
+      </ul>
+
+    </li>
+    <li class="nav-item active" id="items-li">
+    </li>
+  </ul>
+</div>
+<div class="collapse navbar-collapse">
+  <ul class="navbar-nav" id="menu-logado">
+    <li class="nav-item">
+      <span><?php echo"Bem vindo ". $_SESSION['nomeUsuario']; ?></span>
+    </li>
+    <li class="nav-item">
+    </li>
+  </ul>
+  <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menu-opcoes">
+    <li class="nav-item" id="items-li">
+      <a class="nav-link" href="../Autenticacao/DeslogarUsuario.php" id="items-a">Sair <span class="glyphicon glyphicon-log-out"></span></a>
+    </li>
+  </ul>
+</div>
+</nav>
+</div>
 </nav>
 <!---------------- FIM MENU PRINCIPAL  ------------>
