@@ -41,7 +41,7 @@ if(!isset($_SESSION['idUsuario'])){
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav" id="menu-logado">
       <li class="nav-item">
-        <span><?php echo $_SESSION['loginUsuario']; ?></span>
+        <span><?php echo"Bem Vindo | ".$_SESSION['nomeUsuario']; ?></span>
       </li>
       <li class="nav-item">
       </li>

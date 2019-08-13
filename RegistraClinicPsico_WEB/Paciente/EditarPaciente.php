@@ -57,6 +57,7 @@
 		$outros = $resultado['OUTROS'];
     }
 }
+
 if (isset($_POST['atualizar'])) {
 
     require '../Banco/conexao.php';
@@ -67,9 +68,9 @@ if (isset($_POST['atualizar'])) {
 	$idadePaciente = addslashes($_POST['idadePaciente']);
 	$cpfPaciente = addslashes($_POST['cpfPaciente']);
 	$rgPaciente = addslashes($_POST['rgPaciente']);
-	$sexoPaciente = addslashes($_POST['sexo']);
-	$telefonePaciente = addslashes($_POST['telefone']);
-	$telefoneOpcionalPaciente = addslashes($_POST['telefoneOpcional']);
+	$sexoPaciente = addslashes($_POST['sexoPaciente']);
+	$telefonePaciente = addslashes($_POST['telefonePaciente']);
+	$telefoneOpcionalPaciente = addslashes($_POST['telefoneOpcionalPaciente']);
 	$estadoCivil = addslashes($_POST['estadoCivil']);
 
 	$cidadePaciente = addslashes($_POST['cidade']);
@@ -122,7 +123,7 @@ if (isset($_POST['atualizar'])) {
 		"CPFPACIENTE" =>$cpfPaciente,
 		"RGPACIENTE"=>$rgPaciente,
 		"SEXOPACIENTE"=>$sexoPaciente,
-		"TELEFONEPACIENTE"=>$telefone,
+		"TELEFONEPACIENTE"=>$telefonePaciente,
 		"TELEFONEOPCIONALPACIENTE"=>$telefoneOpcionalPaciente,
 		"ESTADOCIVIL"=>$estadoCivil,
 		"CIDADEPACIENTE"=>$cidadePaciente,
