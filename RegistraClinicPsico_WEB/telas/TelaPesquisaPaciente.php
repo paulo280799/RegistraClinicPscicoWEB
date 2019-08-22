@@ -45,7 +45,7 @@
 						<td><?php echo $paciente['TELEFONEPACIENTE']; ?></td>
 						<td><?php echo $paciente['CIDADEPACIENTE']; ?></td>						
 						<td>
-							<a href="../telas/TelaPaciente.php?editar=<?php echo $paciente['IDPACIENTE']; ?>" 
+							<a href="TelaPaciente.php?editar=<?php echo $paciente['IDPACIENTE']; ?>" 
 								class="btn btn-primary" style="background-color: #26619c">Editar
 							</a>
 							
