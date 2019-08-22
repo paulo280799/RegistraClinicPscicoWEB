@@ -47,7 +47,7 @@
 						<td><?php echo $aluno['EMAILALUNO']; ?></td>
 						<td><?php echo $aluno['TURMAALUNO']; ?></td>
 						<td>
-							<a href="../telas/TelaAluno.php?editar=<?php echo $aluno['IDALUNO']; ?>" 
+							<a href="TelaAluno.php?editar=<?php echo $aluno['IDALUNO']; ?>" 
 								class="btn btn-primary" style="background-color: #26619c">Editar
 							</a>
 							<button 

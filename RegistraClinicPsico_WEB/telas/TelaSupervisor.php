@@ -23,88 +23,86 @@
         
         <div class="row">
         <div class="form-group col-sm-8">
-          <label id="nomeSupervisor" class="fw">Nome:</label>
-          <input type="text" name="nomeSupervisor" class="form-control" id="nomeSupervisor">
+          <label class="fw">Nome:</label>
+          <input type="text" name="nomeSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-4">
-          <label id="cpfSupervisor" class="fw">CPF:</label>
-          <input type="text" name="cpfSupervisor" class="form-control" id="cpfSupervisor">
+          <label class="fw">CPF:</label>
+          <input type="text" name="cpfSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="rgSupervisor" class="fw">RG:</label>
-          <input type="text" name="rgSupervisor" class="form-control" id="rgSupervisor">
+          <label class="fw">RG:</label>
+          <input type="text" name="rgSupervisor" class="form-control" >
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="dataNascimentoSupervisor" class="fw">Data de Nascimento:</label>
-          <input type="date" name="dataNascimentoSupervisor" class="form-control" id="dataNascimentoSupervisor">
+          <label class="fw">Data de Nascimento:</label>
+          <input type="date" name="dataNascimentoSupervisor" class="form-control">
         </div>
 
 
-        <div class="form-group col-sm-6">
-          <label style="margin-right: 5px;" class="fw">Sexo:</label>
-          <div class="form-group form-check-inline">
-            <input type="radio" class="form-check-input" name="sexoSupervisor" value="M" id="masc" >
-            <label class="form-check-input" for="masc">Masculino</label>
-          </div>
-          <div class="form-group form-check-inline">
-            <input type="radio" class="form-check-input" name="sexoSupervisor" value="F" id="femi">
-            <label class="form-check-input" for="femi">Feminino</label>
-          </div>
+        <div class="form-group col-sm-4">
+          <label class="fw">Sexo Aluno:</label>
+          <select name="sexoSupervisor" class="form-control">
+            <option value=" "></option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Outros">Outros</option>
+          </select>
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="telefoneSupervisor" class="fw">Telefone:</label>
-          <input type="text" name="telefoneSupervisor" class="form-control" id="telefoneSupervisor" >
+          <label  class="fw">Telefone:</label>
+          <input type="text" name="telefoneSupervisor" class="form-control">
         </div>
         </div>
 
         <div class="row">        
         <div class="form-group col-sm-4">
-          <label id="estadoSupervisor" class="fw">Estado:</label>
-          <input type="text" name="estadoSupervisor" class="form-control" id="estadoSupervisor" >
+          <label class="fw">Estado:</label>
+          <input type="text" name="estadoSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-4">
-          <label id="cidadeSupervisor" class="fw">Cidade:</label>
-          <input type="text" name="cidadeSupervisor" class="form-control" id="cidadeSupervisor" >
+          <label class="fw">Cidade:</label>
+          <input type="text" name="cidadeSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-4">
-          <label id="bairroSupervisor" class="fw">Bairro:</label>
-          <input type="text" name="bairroSupervisor" class="form-control" id="bairroSupervisor">
+          <label class="fw">Bairro:</label>
+          <input type="text" name="bairroSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="ruaSupervisor" class="fw">Rua:</label>
-          <input type="text" name="ruaSupervisor" class="form-control" id="ruaSupervisor" >
+          <label class="fw">Rua:</label>
+          <input type="text" name="ruaSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-4">
-          <label id="numCasaSupervisor" class="fw">Numero da casa:</label>
-          <input type="text" name="numCasaSupervisor" class="form-control" id="numCasaSupervisor" >
+          <label class="fw">Numero da casa:</label>
+          <input type="text" name="numCasaSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-2">
-          <label id="complementoSupervisor" class="fw">Complemento:</label>
-          <input type="text" name="complementoSupervisor" class="form-control" id="complementoSupervisor" >
+          <label class="fw">Complemento:</label>
+          <input type="text" name="complementoSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="emailSupervisor" class="fw">Email:</label>
-          <input type="text" name="emailSupervisor" class="form-control" id="emailSupervisor" >
+          <label class="fw">Email:</label>
+          <input type="text" name="emailSupervisor" class="form-control">
         </div>        
 
         <div class="form-group col-sm-6">
-          <label id="turmaSupervisor" class="fw">Turma do Supervisor:</label>
-          <input type="text" name="turmaSupervisor" class="form-control" id="turmaSupervisor" >
+          <label class="fw">Turma do Supervisor:</label>
+          <input type="text" name="turmaSupervisor" class="form-control">
         </div>
 
         <div class="form-group col-sm-12">
-          <label id="especializacaoSupervisor" class="fw">Especialização:</label>
-          <input type="text" name="especializacaoSupervisor" class="form-control" id="especializacaoSupervisor" >
+          <label class="fw">Especialização:</label>
+          <input type="text" name="especializacaoSupervisor" class="form-control">
         </div>
 
         </div>

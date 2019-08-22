@@ -89,25 +89,25 @@ CREATE TABLE IF NOT EXISTS `paciente` (
 -- Estrutura da tabela `supervisor`
 --
 
-DROP TABLE IF EXISTS `supervisor`;
-CREATE TABLE IF NOT EXISTS `supervisor` (
-  `idSupervisor` int(11) NOT NULL AUTO_INCREMENT,
-  `bairroSupervisor` varchar(550) DEFAULT NULL,
-  `cidadeSupervisor` varchar(500) DEFAULT NULL,
-  `complementoSupervisor` varchar(300) DEFAULT NULL,
-  `cpfSupervisor` varchar(20) DEFAULT NULL,
-  `dataNascimentoSupervisor` varchar(15) DEFAULT NULL,
-  `emailSupervisor` varchar(50) DEFAULT NULL,
-  `enderecoNumeroSupervisor` varchar(16) DEFAULT NULL,
-  `enderecoSupervisor` varchar(550) DEFAULT NULL,
-  `especializacaoSupervisor` varchar(50) DEFAULT NULL,
-  `estadoSupervisor` varchar(20) DEFAULT NULL,
-  `nomeSupervisor` varchar(500) NOT NULL,
-  `rgSupervisor` varchar(50) DEFAULT NULL,
-  `sexoSupervisor` varchar(10) DEFAULT NULL,
-  `telefoneSupervisor` varchar(20) DEFAULT NULL,
-  `turmaSupervisor` varchar(40) DEFAULT NULL,
-  PRIMARY KEY (`idSupervisor`)
+DROP TABLE IF EXISTS `SUPERVISOR`;
+CREATE TABLE IF NOT EXISTS `SUPERVISOR` (
+  `IDSUPERVISOR` int(11) NOT NULL AUTO_INCREMENT,
+  `NOMESUPERVISOR` varchar(255) NOT NULL,
+  `CPFSUPERVISOR` varchar(255) NOT NULL,
+  `RGSUPERVISOR` varchar(255) NOT NULL,
+  `DATANASCIMENTOSUPERVISOR` varchar(255) NOT NULL,
+  `SEXOSUPERVISOR` varchar(255) NOT NULL,
+  `TELEFONESUPERVISOR` varchar(255) NOT NULL,
+  `ESTADOSUPERVISOR` varchar(255) NOT NULL,
+  `CIDADESUPERVISOR` varchar(255) NOT NULL,
+  `BAIRROSUPERVISOR` varchar(255) NOT NULL,
+  `RUASUPERVISOR` varchar(255) NOT NULL,
+  `NUMCASASUPERVISOR` varchar(255) NOT NULL,
+  `COMPLEMENTOSUPERVISOR` varchar(255) NOT NULL,
+  `EMAILSUPERVISOR` varchar(255) NOT NULL,
+  `TURMASUPERVISOR` varchar(255) NOT NULL,
+  `ESPECIALIZACAOSUPERVISOR` varchar(255) NOT NULL,
+  PRIMARY KEY (`IDSUPERVISOR`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --

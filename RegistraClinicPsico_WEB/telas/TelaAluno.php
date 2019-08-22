@@ -31,29 +31,29 @@
         <input type="hidden" name="idAluno" value="<?php echo $idAluno; ?>">
         <div class="row">
         <div class="form-group col-sm-8">
-          <label id="nomeAluno" class="fw">Nome:</label>
-          <input type="text" name="nomeAluno"  value="<?php echo $nomeAluno; ?> " class="form-control" id="nomeAluno">
+          <label class="fw">Nome:</label>
+          <input type="text" name="nomeAluno"  value="<?php echo $nomeAluno; ?> " class="form-control">
         </div>
 
         <div class="form-group col-sm-4">
-          <label id="matriculaAluno" class="fw">Matricula:</label>
-          <input type="text" name="matriculaAluno" value="<?php echo $matriculaAluno; ?>" class="form-control" id="matriculaAluno">
+          <label class="fw">Matricula:</label>
+          <input type="text" name="matriculaAluno" value="<?php echo $matriculaAluno; ?>" class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="cpfAluno" class="fw">CPF:</label>
-          <input type="text" name="cpfAluno" value="<?php echo $cpfAluno; ?> "class="form-control" id="cpfAluno">
+          <label class="fw">CPF:</label>
+          <input type="text" name="cpfAluno" value="<?php echo $cpfAluno; ?> "class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="rgAluno" class="fw">RG:</label>
-          <input type="text" name="rgAluno"  value="<?php echo $rgAluno; ?> "class="form-control" id="rgAluno">
+          <label class="fw">RG:</label>
+          <input type="text" name="rgAluno"  value="<?php echo $rgAluno; ?> "class="form-control">
         </div>
         
         
         <div class="form-group col-sm-4">
-          <label id="sexoAluno" class="fw">Sexo Aluno:</label>
-          <select name="sexoAluno" class="form-control" id="sexoAluno">
+          <label  class="fw">Sexo Aluno:</label>
+          <select name="sexoAluno" class="form-control" >
             <option value="<?php echo $sexoAluno; ?>"><?php echo $sexoAluno; ?></option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
@@ -62,60 +62,60 @@
         </div>
 
         <div class="form-group col-sm-3">
-          <label id="dataNascimentoAluno" class="fw">Data de Nascimento:</label>
-          <input type="date" name="dataNascimentoAluno" value="<?php echo $dataNascimentoAluno; ?> "class="form-control" id="dataNascimentoAluno">
+          <label class="fw">Data de Nascimento:</label>
+          <input type="date" name="dataNascimentoAluno" value="<?php echo $dataNascimentoAluno; ?> "class="form-control">
         </div>
 
         <div class="form-group col-sm-5">
-          <label id="telefone" class="fw">Telefone:</label>
-          <input type="text" name="telefoneAluno" value="<?php echo $telefoneAluno; ?>" class="form-control" id="telefone" >
+          <label class="fw">Telefone:</label>
+          <input type="text" name="telefoneAluno" value="<?php echo $telefoneAluno; ?>" class="form-control">
         </div>
 
         </div>
              
         <div class="row">        
         <div class="form-group col-sm-4">
-          <label id="estadoAluno" class="fw">Estado:</label>
-          <input type="text" name="estadoAluno" value="<?php echo $estadoAluno; ?>" class="form-control" id="estadoAluno" >
+          <label class="fw">Estado:</label>
+          <input type="text" name="estadoAluno" value="<?php echo $estadoAluno; ?>" class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="cidadeAluno" class="fw">Cidade:</label>
-          <input type="text" name="cidadeAluno" value="<?php echo $cidadeAluno; ?>" class="form-control" id="cidadeAluno" >
+          <label class="fw">Cidade:</label>
+          <input type="text" name="cidadeAluno" value="<?php echo $cidadeAluno; ?>" class="form-control">
         </div>
 
         <div class="form-group col-sm-2">
-          <label id="numCasaAluno" class="fw">Numero da casa:</label>
-          <input type="number" name="numCasaAluno" value="<?php echo $numCasaAluno; ?> "class="form-control" id="numCasaAluno" >
+          <label class="fw">Numero da casa:</label>
+          <input type="number" name="numCasaAluno" value="<?php echo $numCasaAluno; ?> "class="form-control" >
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="ruaAluno" class="fw">Rua:</label>
-          <input type="text" name="ruaAluno" value="<?php echo $ruaAluno; ?> "class="form-control" id="ruaAluno" >
+          <label class="fw">Rua:</label>
+          <input type="text" name="ruaAluno" value="<?php echo $ruaAluno; ?> "class="form-control">
         </div>        
 
         <div class="form-group col-sm-4">
-          <label id="bairroAluno" class="fw">Bairro:</label>
-          <input type="text" name="bairroAluno" value="<?php echo $bairroAluno; ?>" class="form-control" id="bairroAluno">
+          <label class="fw">Bairro:</label>
+          <input type="text" name="bairroAluno" value="<?php echo $bairroAluno; ?>" class="form-control">
         </div>
 
         
         <div class="form-group col-sm-2">
-          <label id="complementoAluno" class="fw">Complemento:</label>
-          <input type="text" name="complementoAluno" value="<?php echo $complementoAluno; ?>" class="form-control" id="complementoAluno" >
+          <label class="fw">Complemento:</label>
+          <input type="text" name="complementoAluno" value="<?php echo $complementoAluno; ?>" class="form-control">
         </div>
 
         </div>
         
         <div class="row">
         <div class="form-group col-sm-6">
-          <label id="emailAluno" class="fw">Email:</label>
-          <input type="email" name="emailAluno"  value="<?php echo $emailAluno; ?>" class="form-control" id="emailAluno" >
+          <label class="fw">Email:</label>
+          <input type="email" name="emailAluno"  value="<?php echo $emailAluno; ?>" class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="turmaAluno" class="fw">Turma do Aluno:</label>
-          <input type="text" name="turmaAluno"  value="<?php echo $turmaAluno; ?>" class="form-control" id="turmaAluno" >
+          <label class="fw">Turma do Aluno:</label>
+          <input type="text" name="turmaAluno"  value="<?php echo $turmaAluno; ?>" class="form-control">
         </div>
 
         </div>

@@ -14,46 +14,41 @@
 </head>
 <body>
   <?php include_once '../Util/NavBar.php'; ?>
-  <?php require_once '../Paciente/EditarPaciente.php'; ?>
+  
 
   <br>
 
   <div class="container">
 
-    <?php if(isset($_GET['editar'])):?>
-    <form action="../Paciente/EditarPaciente.php" method="post">
-    <?php else: ?>
-    <form action="../Paciente/CadastroPaciente.php" method="post">
-    <?php endif; ?>
+    
     
       <fieldset>
         <legend class="fw" style="text-align: center;">Cadastro de Paciente</legend>
-        <input type="hidden" name="idPaciente" value="<?php echo $idPaciente; ?>">
-        <div class="row">
+        <div class="row" >
         <div class="form-group col-sm-10">
-          <label id="nomePaciente" class="fw">Nome:</label>
-          <input type="text" name="nomePaciente" value="<?php echo $nomePaciente ?>" class="form-control" id="nomePaciente">
+          <label class="fw">Nome:</label>
+          <input type="text" name="nomePaciente" class="form-control">
         </div>
 
         <div class="form-group col-sm-2">
-          <label id="idadePaciente" class="fw">Idade:</label>
-          <input type="number" name="idadePaciente" class="form-control" id="idadePaciente">
+          <label class="fw">Idade:</label>
+          <input type="number" name="idadePaciente" class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="cpfPaciente" class="fw">CPF:</label>
-          <input type="text" name="cpfPaciente"  class="form-control" id="cpfPaciente">
+          <label class="fw">CPF:</label>
+          <input type="text" name="cpfPaciente"  class="form-control">
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="rgPaciente" class="fw">RG:</label>
-          <input type="text" name="rgPaciente"  class="form-control" id="rgPaciente">
+          <label class="fw">RG:</label>
+          <input type="text" name="rgPaciente"  class="form-control" >
         </div>
 
        <div class="form-group col-sm-4">
-          <label id="sexoPaciente" class="fw">Sexo Paciente:</label>
-          <select name="sexoPaciente" class="form-control" id="sexoPaciente">
-            <option ><?php echo $sexoPaciente; ?></option>
+          <label class="fw">Sexo Paciente:</label>
+          <select name="sexoPaciente" class="form-control" >
+            <option ></option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
             <option value="Outros">Outros</option>
@@ -61,19 +56,19 @@
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="telefone" class="fw">Telefone:</label>
-          <input type="text" name="telefonePaciente" class="form-control" id="telefonePaciente" >
+          <label  class="fw">Telefone:</label>
+          <input type="text" name="telefonePaciente" class="form-control" >
         </div>
 
         <div class="form-group col-sm-6">
-          <label id="telefoneOpcional" class="fw">Telefone Opcional:</label>
-          <input type="text" name="telefoneOpcionalPaciente" class="form-control" id="telefoneOpcionalPaciente">
+          <label  class="fw">Telefone Opcional:</label>
+          <input type="text" name="telefoneOpcionalPaciente" class="form-control" >
         </div>
               
         <div class="form-group col-sm-4">
-          <label id="estadoCivil" class="fw">Estado Civil:</label>
-          <select name="estadoCivil" class="form-control" id="estadoCivil">
-            <option ><?php echo $estadoCivil; ?></option>
+          <label  class="fw">Estado Civil:</label>
+          <select name="estadoCivil" class="form-control" >
+            <option ></option>
             <option value="Solteiro">Solteiro(a)</option>
             <option value="Casado">Casado(a)</option>
             <option value="Outros">Outros</option>
@@ -109,43 +104,43 @@
 
         <div class="row"style="margin-left: 110px; margin-right: 120px;">
         <div class="form-group col-sm-10">
-            <label id="nome" class="fw">Responsável:</label>
-            <input type="text" name="responsavel"  class="form-control" id="responsavel" >
+            <label class="fw">Responsável:</label>
+            <input type="text" name="responsavel"  class="form-control" >
           </div>
 
           <div class="form-group col-sm-6">
-            <label id="situacao" class="fw">Situação:</label>
-            <input type="text" name="situacao" class="form-control" id="situacao" >
+            <label class="fw">Situação:</label>
+            <input type="text" name="situacao" class="form-control">
           </div>
 
           <div class="form-group col-sm-6">
-            <label id="tipoPaciente" class="fw">Tipo de Paciente:</label>
-            <input type="text" name="tipoPaciente" class="form-control" id="tipoPaciente" >
+            <label class="fw">Tipo de Paciente:</label>
+            <input type="text" name="tipoPaciente" class="form-control" >
           </div>
         </div>
           <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label id="queixaPrincipal" class="fw">Queixa Principal:</label>
-            <input type="text" name="queixaPrincipal" class="form-control" id="queixaPrincipal" >
+            <label class="fw">Queixa Principal:</label>
+            <input type="text" name="queixaPrincipal" class="form-control">
           </div>
 
           <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label id="disponibilidade" class="fw">Disponibilidade:</label>
-            <input type="text" name="disponibilidade" class="form-control" id="disponibilidade" >
+            <label class="fw">Disponibilidade:</label>
+            <input type="text" name="disponibilidade" class="form-control" >
           </div>
 
           <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label id="setorEncaminhado" class="fw">Setor de encaminhamento:</label>
-            <input type="text" name="setorEncaminhado" class="form-control" id="setorEncaminhado" >
+            <label class="fw">Setor de encaminhamento:</label>
+            <input type="text" name="setorEncaminhado" class="form-control">
           </div>
 
           <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label id="contrareferencia" class="fw">Contra Referencia:</label>
-            <input type="text" name="contrareferencia" class="form-control" id="contrareferencia" >
+            <label  class="fw">Contra referencia:</label>
+            <input type="text" name="contrareferencia" class="form-control" >
           </div>
 
           <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label id="outros" class="fw">Outros:</label>
-            <input type="text" name="outros" class="form-control" id="outros" >
+            <label  class="fw">Outros:</label>
+            <input type="text" name="outros" class="form-control" >
           </div>
 
         <br>

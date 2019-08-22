@@ -49,7 +49,7 @@
                             $banco2->query("SELECT * FROM paciente");
 
                             foreach ($banco2->result() as $paciente) : ?>
-                                <option value="<?php echo $paciente['idPaciente']; ?>"><?php echo $paciente['nomePaciente']; ?></option>
+                                <option value="<?php echo $paciente['IDPACIENTE']; ?>"><?php echo $paciente['NOMEPACIENTE']; ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
