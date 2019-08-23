@@ -1,3 +1,4 @@
+
 <?php
 
 $idAluno = 0;
@@ -46,10 +47,10 @@ if (isset($_GET['editar'])) {
 		$complementoAluno = $resultado['COMPLEMENTOALUNO'];
 		$turmaAluno = $resultado['TURMAALUNO'];
 	} 
-
 }
 
 if(isset($_POST['atualizar'])){
+
 	require '../Banco/conexao.php';
 
 	$idAluno = addslashes($_POST['idAluno']);
@@ -69,33 +70,34 @@ if(isset($_POST['atualizar'])){
 	$complementoAluno= addslashes($_POST['complementoAluno']);
 	$turmaAluno= addslashes($_POST['turmaAluno']);
 
-$banco = new Banco("localhost","psico","root","");
+	$banco = new Banco("localhost","psico","root","");
 
-try {
+	try {
 
-	$banco->update("Aluno", array(
-	"NOMEALUNO"=>$nomeAluno,
-	"MATRICULAALUNO" =>$matriculaAluno,
-	"CPFALUNO"=>$cpfAluno,
-	"RGALUNO"=>$rgAluno,
-	"SEXOALUNO"=>$sexoAluno,
-	"TELEFONEALUNO"=>$telefoneAluno,
-	"DATANASCIMENTOALUNO"=>$dataNascimentoAluno,
-	"ESTADOALUNO"=>$estadoAluno,
-	"CIDADEALUNO"=>$cidadeAluno,
-	"BAIRROALUNO"=>$bairroAluno,
-	"RUAALUNO"=>$ruaAluno,
-	"NUMCASAALUNO"=>$numCasaAluno,
-	"EMAILALUNO"=>$emailAluno,
-	"COMPLEMENTOALUNO"=>$complementoAluno,
-	"TURMAALUNO"=>$turmaAluno
-), array("IDALUNO"=>$idAluno));
+		$banco->update("Aluno", array(
+		"NOMEALUNO"=>$nomeAluno,
+		"MATRICULAALUNO" =>$matriculaAluno,
+		"CPFALUNO"=>$cpfAluno,
+		"RGALUNO"=>$rgAluno,
+		"SEXOALUNO"=>$sexoAluno,
+		"TELEFONEALUNO"=>$telefoneAluno,
+		"DATANASCIMENTOALUNO"=>$dataNascimentoAluno,
+		"ESTADOALUNO"=>$estadoAluno,
+		"CIDADEALUNO"=>$cidadeAluno,
+		"BAIRROALUNO"=>$bairroAluno,
+		"RUAALUNO"=>$ruaAluno,
+		"NUMCASAALUNO"=>$numCasaAluno,
+		"EMAILALUNO"=>$emailAluno,
+		"COMPLEMENTOALUNO"=>$complementoAluno,
+		"TURMAALUNO"=>$turmaAluno
+	), array("IDALUNO"=>$idAluno));
 
-	echo "<script>alert('ALTERADO COM SUCESSO !!');window.location = '../telas/TelaAluno.php';</script>";
-	
-} catch (Exception $e) {
-	echo "<script>alert('ERRO AO ALTERADO ALUNO!!')</script>";
-}
+		echo "<script>alert('ALTERADO COM SUCESSO !!');window.location = '../telas/TelaAluno.php';</script>";
+
+	} catch (Exception $e) {
+		
+		echo "<script>alert('ERRO AO ALTERADO ALUNO!!')</script>";
+	}
 }
 
 

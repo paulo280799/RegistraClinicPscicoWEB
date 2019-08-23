@@ -12,7 +12,7 @@ if(!isset($_SESSION['idUsuario'])){
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="abrirMenuResponsivo">
-    <img src="../Imagens/logo.png" alt="logo" class="logo-menu">
+    <img src="../Util/Imagens/LogoPsico.png" alt="logo" class="logo-menu">
     <a class="navbar-brand" href="#" id="nome-logo">Registra Clinic Psico</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menu-opcoes">
       <li class="nav-item active" id="items-li">
