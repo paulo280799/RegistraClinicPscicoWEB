@@ -26,6 +26,9 @@ if(!isset($_SESSION['idUsuario'])){
           <li class="sub-menu-li"><a href="TelaUsuario.php">Usuario</a></li>
           <li class="sub-menu-li"><a href="TelaAluno.php">Aluno</a></li>
         </ul>
+      </li>
+      <li class="nav-item active" id="items-li">
+        <a class="nav-link" href="Agendamento.php" id="items-a">Agendamento<span class="sr-only">(current)</span></a>
       </li>      
       <li class="nav-item active" id="items-li">
         <a class="nav-link" id="items-a">Atendimento</a>
