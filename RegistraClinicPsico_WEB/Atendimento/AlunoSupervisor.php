@@ -2,13 +2,13 @@
 
 class AlunoSupervisor{
 
-    private $idVincularAlunosSupervisor;
+    private $idVincularAlunoSupervisor;
     private $dataInicioSupervisao;
     private $aluno_idAluno;
     private $supervisor_idSupervisor;
 
    
-    function setIdVincularAlunoSupervisor($IdVincularAlunosSupervisor){$this->idVincularAlunoSupervisor = $IdVincularAlunosSupervisor;}
+    function setIdVincularAlunoSupervisor($IdVincularAlunoSupervisor){$this->idVincularAlunoSupervisor = $IdVincularAlunoSupervisor;}
     function getIdVincularAlunoSupervisor(){return $this->idVincularAlunoSupervisor;}
 
     function setDataInicioSupervisao($DataInicioSupervisao){$this->dataInicioSupervisao = $DataInicioSupervisao;}

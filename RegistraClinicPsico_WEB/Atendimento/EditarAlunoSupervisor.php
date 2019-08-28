@@ -2,8 +2,8 @@
 
 $id = 0;
 $dataInicioSupervisao = "";
-$aluno_idAluno = "";
-$supervisor_idSupervisor = "";
+$aluno_idAluno = 0;
+$supervisor_idSupervisor = 0;
 
 
 if (isset($_GET['editar'])) {
@@ -28,35 +28,35 @@ if (isset($_GET['editar'])) {
 if (isset($_POST['atualizar'])) {
 
     require '../Banco/conexao.php';
-    require_once 'Usuario.php';
+    require_once 'AlunoSupervisor.php';
 
-    $idUsuario = addslashes($_POST['idUsuario']);
-    $nomeUsuario = addslashes($_POST['nomeUsuario']);
-    $loginUsuario = addslashes($_POST['loginUsuario']);
-    $senhaUsuario = addslashes($_POST['senhaUsuario']);
-    $nivelUsuario = addslashes($_POST['nivelUsuario']);
+    $id = addslashes($_POST['id']);
+    $dataInicioSupervisao = addslashes($_POST['dataInicioSupervisao']);
+    $aluno_idAluno = addslashes($_POST['idAluno']);
+    $supervisor_idSupervisor = addslashes($_POST['idSupervisor']);
 
-    $Usuario = new Usuario();
+    $AlunoSupervisor = new AlunoSupervisor();
 
-    $Usuario->setIdUsuario($idUsuario);
-    $Usuario->setNomeUsuario($nomeUsuario);
-    $Usuario->setLoginUsuario($loginUsuario);
-    $Usuario->setSenhaUsuario($senhaUsuario);
-    $Usuario->setNivelUsuario($nivelUsuario);
+    $AlunoSupervisor->setIdVincularAlunoSupervisor($id);
+    $AlunoSupervisor->setDataInicioSupervisao($dataInicioSupervisao);
+    $AlunoSupervisor->setAluno_idAluno($aluno_idAluno);
+    $AlunoSupervisor->setSupervisor_idSupervisor($supervisor_idSupervisor);
+
 
     $banco = new Banco("localhost", "psico", "root", "");
 
+
     try {
 
-        $banco->update("usuario", array(
-            "loginUsuario" => $loginUsuario,
-            "nomeUsuario" => $nomeUsuario,
-            "senhaUsuario" => $senhaUsuario,
-            "tipoUsuario" => $nivelUsuario
-        ), array("idUsuario" => $idUsuario));
+        $banco->update("vincularalunosupervisor", array(
+            "dataInicioSupervisao" => $dataInicioSupervisao,
+            "aluno_idAluno" => $aluno_idAluno,
+            "supervisor_idSupervisor" => $supervisor_idSupervisor
+        ), array("idVincularAlunosSupervisor" => $id));
 
-        echo "<script>alert('EDITADO COM SUCESSO !!');window.location = '../telas/TelaUsuario.php';</script>";
+
+        echo "<script>alert('EDITADO COM SUCESSO !!');window.location = '../telas/TelaAlunoSupervisor.php';</script>";
     } catch (Exception $e) {
-        echo "<script>alert('ERRO AO EDITAR USUÁRIO!!')</script>";
+        echo "<script>alert('ERRO AO EDITAR Aluno Supervisor!!')</script>";
     }
 }

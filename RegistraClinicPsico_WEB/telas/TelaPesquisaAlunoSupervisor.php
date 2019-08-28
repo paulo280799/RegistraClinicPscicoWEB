@@ -39,28 +39,28 @@
 				$banco->query("SELECT * FROM aluno JOIN vincularalunosupervisor ON aluno.IDALUNO = vincularalunosupervisor.aluno_idAluno JOIN supervisor ON supervisor.idSupervisor = vincularalunosupervisor.supervisor_idSupervisor");
 
 				foreach ($banco->result() as $vinculo) : ?>
-					<tr>
-						<td><?php echo $vinculo['idVincularAlunosSupervisor']; ?></td>
-						<td><?php echo $vinculo['NOMEALUNO']; ?></td>
-						<td><?php echo $vinculo['nomeSupervisor']; ?></td>
-						<td><?php echo $vinculo['dataInicioSupervisao']; ?></td>
-						<td>
-							<a href="TelaAlunoSupervisor.php?editar=<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" class="btn btn-primary" style="background-color: #26619c">Editar</a>
-							<button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#excluir<?php echo $vinculo['idVincularAlunosSupervisor']; ?>">Excluir</button>
-							<div class="modal fade" id="excluir<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-body">
-											<p>Você realmente deseja excluir <strong><?php echo $vinculo['idVincularAlunosSupervisor']; ?></strong>?
-										</div>
-										<div class="modal-footer">
-											<a href="<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" class="btn btn-danger">Excluir</a>
-											<button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
-										</div>
+				<tr>
+					<td><?php echo $vinculo['idVincularAlunosSupervisor']; ?></td>
+					<td><?php echo $vinculo['NOMEALUNO']; ?></td>
+					<td><?php echo $vinculo['nomeSupervisor']; ?></td>
+					<td><?php echo $vinculo['dataInicioSupervisao']; ?></td>
+					<td>
+						<a href="TelaAlunoSupervisor.php?editar=<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" class="btn btn-primary" style="background-color: #26619c">Editar</a>
+						<button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#excluir<?php echo $vinculo['idVincularAlunosSupervisor']; ?>">Excluir</button>
+						<div class="modal fade" id="excluir<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal-dialog" role="document">
+								<div class="modal-content">
+									<div class="modal-body">
+										<p>Você realmente deseja excluir <strong><?php echo $vinculo['idVincularAlunosSupervisor']; ?></strong>?
+									</div>
+									<div class="modal-footer">
+										<a href="../Atendimento/DeletarAlunoSupervisor.php?deletar=<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" class="btn btn-danger">Excluir</a>
+										<button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
 									</div>
 								</div>
-						</td>
-					</tr>
+							</div>
+					</td>
+				</tr>
 				<?php endforeach; ?>
 			</tbody>
 		</table>

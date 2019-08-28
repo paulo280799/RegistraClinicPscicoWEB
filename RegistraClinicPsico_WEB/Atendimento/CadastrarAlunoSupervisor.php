@@ -1,5 +1,5 @@
 <?php
-include_once '../Atendimento/AlunoSupervisor.php';
+include_once 'AlunoSupervisor.php';
 require '../Banco/conexao.php';
 
 
@@ -13,15 +13,16 @@ $AlunoSupervisor->setDataInicioSupervisao($dataInicioSupervisao);
 $AlunoSupervisor->setAluno_idAluno($aluno_idAluno);
 $AlunoSupervisor->setSupervisor_idSupervisor($supervisor_idSupervisor);
 
-$banco = new Banco("localhost", "registraclinic", "root", "");
+
+$banco = new Banco("localhost", "psico", "root", "");
 
 try {
-
     $banco->insert("vincularalunosupervisor", array(
-        "dataInicioSupervisao"->$dataInicioSupervisao,
-        "aluno_idAluno"->$aluno_idAluno,
-        "supervisor_idSupervisor"->$supervisor_idSupervisor
+        "dataInicioSupervisao" => $dataInicioSupervisao,
+        "aluno_idAluno" => $aluno_idAluno,
+        "supervisor_idSupervisor" => $supervisor_idSupervisor
     ));
+
 
     echo "<script>alert('Atendimento Aluno Supervisor SALVO COM SUCESSO !!');window.location = '../telas/TelaAlunoSupervisor.php';</script>";
 } catch (Exception $e) {

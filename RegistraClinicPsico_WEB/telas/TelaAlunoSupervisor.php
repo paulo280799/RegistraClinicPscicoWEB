@@ -17,58 +17,75 @@
     <?php include_once '../Util/NavBar.php'; ?>
     <?php include_once '../Atendimento/EditarAlunoSupervisor.php'; ?>
     <div class="container">
-        <form action="../Atendimento/CadastrarAlunoSupervisor.php" method="post">
-            <fieldset>
-                <legend class="fw" style="text-align: center;">Vincular<br> Aluno -> Supervisor</legend>
-                <br>
-                <div class="row">                    
-                    <div class="form-group col-sm-6">
-                        <label id="idAluno" class="fw">Aluno:</label>
-                        <select name="idAluno" class="form-control select2-single" id="idAluno" required>
-                            <option value="">Selecione</option>
-                            <?php
-                            require_once '../Banco/conexao.php';
 
-                            $banco = new Banco("localhost", "psico", "root", "");
+        <?php if (isset($_GET['editar'])) : ?>
+        <form action="../Atendimento/EditarAlunoSupervisor.php" method="post">
+            <?php else : ?>
+            <form action="../Atendimento/CadastrarAlunoSupervisor.php" method="post">
+                <?php endif; ?>
+                <fieldset>
+                    <legend class="fw" style="text-align: center;">Vincular<br> Aluno -> Supervisor</legend>
+                    <br>
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label id="idAluno" class="fw">Aluno:</label>
+                            <select name="idAluno" class="form-control select2-single" id="idAluno" required>
+                                <option value="">Selecione</option>
+                                <?php
+                                require_once '../Banco/conexao.php';
 
-                            $banco->query("SELECT IDALUNO, NOMEALUNO , MATRICULAALUNO , CPFALUNO, EMAILALUNO, TURMAALUNO FROM  aluno");
+                                $banco = new Banco("localhost", "psico", "root", "");
 
-                            foreach ($banco->result() as $aluno) : ?>
-                                <option value="<?php echo $aluno['IDALUNO']; ?>" <?php 
-                                if($aluno['IDALUNO'] == $aluno_idAluno){echo "selected";}
-                                ?>><?php echo $aluno['NOMEALUNO']; ?></option>
-                            <?php endforeach; ?>
-                        </select>
+                                $banco->query("SELECT IDALUNO, NOMEALUNO , MATRICULAALUNO , CPFALUNO, EMAILALUNO, TURMAALUNO FROM  aluno");
+
+                                foreach ($banco->result() as $aluno) : ?>
+                                <option value="<?php echo $aluno['IDALUNO']; ?>" <?php
+                                                                                        if ($aluno['IDALUNO'] == $aluno_idAluno) {
+                                                                                            echo "selected";
+                                                                                        }
+                                                                                        ?>><?php echo $aluno['NOMEALUNO']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label id="idSupervisor" class="fw">Supervisor:</label>
+                            <select name="idSupervisor" class="form-control select2-single" id="idSupervisor" required>
+                                <option value="">Selecione</option>
+                                <?php
+
+                                $banco2 = new Banco("localhost", "psico", "root", "");
+
+                                $banco2->query("SELECT * FROM supervisor");
+
+                                foreach ($banco2->result() as $supervisor) : ?>
+                                <option value="<?php echo $supervisor['idSupervisor']; ?>" <?php
+                                                                                                if ($supervisor['idSupervisor'] == $supervisor_idSupervisor) {
+                                                                                                    echo "selected";
+                                                                                                }
+                                                                                                ?>><?php echo $supervisor['nomeSupervisor']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label id="idAluno" class="fw">Data Inicio Supervisão:</label>
+                            <input type="date" name="dataInicioSupervisao" class="form-control" value="<?php echo $dataInicioSupervisao; ?>" id="idAluno" required />
+                        </div>
                     </div>
-
-                    <div class="form-group col-sm-6">
-                        <label id="idSupervisor" class="fw">Supervisor:</label>
-                        <select name="idSupervisor" class="form-control select2-single" id="idSupervisor" required>
-                            <option value="">Selecione</option>
-                            <?php
-
-                            $banco2 = new Banco("localhost", "psico", "root", "");
-
-                            $banco2->query("SELECT * FROM supervisor");
-
-                            foreach ($banco2->result() as $supervisor) : ?>
-                                <option value="<?php echo $supervisor['idSupervisor']; ?>" 
-                                <?php 
-                                if($supervisor['idSupervisor'] == $supervisor_idSupervisor){echo "selected";}
-                                ?>><?php echo $supervisor['nomeSupervisor']; ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <label id="idAluno" class="fw">Data Inicio Supervisão:</label>
-                        <input type="date" name="idAluno" class="form-control" value="<?php echo $dataInicioSupervisao;?>" id="idAluno" required />                            
-                    </div>
-                </div>
-                <button type="submit" value="cadastrar" class="btn btn-outline-success">Enviar</button>
-                <button type="reset" class="btn btn-outline-success">Limpar</button>
-                <a href="TelaPesquisaAlunoSupervisor.php" class="btn btn-outline-success">Pesquisar</a>
-            </fieldset>
-        </form>
+                    <?php if (isset($_GET['editar'])) : ?>
+                    <button type="submit" name="atualizar" value="atualizar" class="btn btn-outline-primary" style="background-color: #26619c; color: white;">
+                        Atualizar
+                    </button>
+                    <?php else : ?>
+                    <button type="submit" name="cadastrar" value="cadastrar" class="btn btn-outline-success" style="background-color: #26619c; color: white;">
+                        Salvar
+                    </button>
+                    <?php endif; ?>
+                    <button type="reset" class="btn btn-outline-success">Limpar</button>
+                    <a href="TelaPesquisaAlunoSupervisor.php" class="btn btn-outline-success">Pesquisar</a>
+                </fieldset>
+            </form>
 
     </div>
 
