@@ -17,3 +17,16 @@
 	font-size: 15px;
 	font-weight: bold;
 }
+
+body {
+	background-image: url('../Util/Imagens/fundo.png');
+	background-repeat: no-repeat;	
+}
+
+h2{
+	color: white;
+}
+
+.footer-copyright{
+	color: white;
+}

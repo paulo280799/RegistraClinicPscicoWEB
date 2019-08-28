@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
 
-if(isset($_SESSION['idUsuario'])){
+if (isset($_SESSION['idUsuario'])) {
     header("Location: Index.php");
 }
 ?>
@@ -9,19 +9,16 @@ if(isset($_SESSION['idUsuario'])){
 <html lang="pt-br">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
+    <link rel="icon" href="../Util/Imagens/LogoPsico.png" sizes="32x32" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../css/login.css">
-
     <title>Login Registra Clinic Psico!</title>
 </head>
 
 <body>
+
     <div class="login-form">
         <form action="../Autenticacao/AutenticarUsuario.php" method="post">
             <h2 class="text-center">Registra Clinic Psico</h2>
@@ -35,13 +32,13 @@ if(isset($_SESSION['idUsuario'])){
             <div class="form-group">
                 <button type="submit" name="entrar" class="btn btn-primary btn-block">Entrar</button>
             </div>
-            
+
             <?php if (isset($_GET['dadosincorretos'])) : ?>
-            <div class="alert alert-danger alert-dismissible" role="alert">                
+            <div class="alert alert-danger alert-dismissible" role="alert">
                 <strong>Erro!</strong> Usuário e senha incorretos!
             </div>
-        <?php endif; ?>
-        </form>        
+            <?php endif; ?>
+        </form>
     </div>
 
     <?php include_once '../Util/Footer.php'; ?>
