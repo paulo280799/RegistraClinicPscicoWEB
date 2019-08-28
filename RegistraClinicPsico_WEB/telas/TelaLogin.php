@@ -21,7 +21,7 @@ if (isset($_SESSION['idUsuario'])) {
 
     <div class="login-form">
         <form action="../Autenticacao/AutenticarUsuario.php" method="post">
-            <h2 class="text-center">Registra Clinic Psico</h2>
+            <h2 class="text-center" >Registra Clinic Psico</h2>
             <hr>
             <div class="form-group">
                 <input type="text" class="form-control" name="loginUsuario" placeholder="Login" required="required">

@@ -13,7 +13,7 @@ if(!isset($_SESSION['idUsuario'])){
   </button>
   <div class="collapse navbar-collapse" id="abrirMenuResponsivo">
     <img src="../Util/Imagens/LogoPsico.png" alt="logo" class="logo-menu">
-    <a class="navbar-brand" href="#" id="nome-logo">Registra Clinic Psico</a>
+    <a class="navbar-brand" href="#" id="nome-logo" style="margin-left:10px;">Registra Clinic Psico</a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="menu-opcoes">
       <li class="nav-item active" id="items-li">
         <a class="nav-link" href="Index.php" id="items-a">Home<span class="sr-only">(current)</span></a>
