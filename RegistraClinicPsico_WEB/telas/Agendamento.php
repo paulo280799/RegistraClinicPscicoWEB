@@ -15,7 +15,21 @@
 <body>
   <?php include_once '../Util/NavBar.php'; ?>
   
+    <div class="form-group col-sm-6">
+        <label id="idPaciente" class="fw">Paciente:</label>
+        <select name="idPaciente" class="form-control select2-single" id="idPaciente" required>
+            <option value="">Selecione</option>
+            <?php
 
+            $banco2 = new Banco("localhost", "psico", "root", "");
+
+            $banco2->query("SELECT * FROM paciente");
+
+            foreach ($banco2->result() as $paciente) : ?>
+                <option value="<?php echo $paciente['IDPACIENTE']; ?>"><?php echo $paciente['NOMEPACIENTE']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
   
   <?php include_once '../Util/Footer.php'; ?>
 

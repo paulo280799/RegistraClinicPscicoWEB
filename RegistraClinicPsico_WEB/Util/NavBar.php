@@ -31,7 +31,7 @@ if(!isset($_SESSION['idUsuario'])){
         <a class="nav-link" href="Agendamento.php" id="items-a">Agendamento<span class="sr-only">(current)</span></a>
       </li>      
       <li class="nav-item active" id="items-li">
-        <a class="nav-link" id="items-a">Atendimento</a>
+        <a class="nav-link" id="items-a">Acompanhamento</a>
         <ul class="sub-menu">
           <li class="sub-menu-li"><a href="../telas/TelaAlunoSupervisor.php">Aluno - Supervisor</a></li>
           <li class="sub-menu-li"><a href="../telas/TelaAlunoPaciente.php">Aluno - Paciente</a></li>

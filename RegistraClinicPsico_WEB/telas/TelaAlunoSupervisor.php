@@ -10,11 +10,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Menu Princial!</title>
+    <title>Aluno - Supervisor!</title>
 </head>
 
 <body>
     <?php include_once '../Util/NavBar.php'; ?>
+    
     <div class="container">
         <form action="" method="post">
             <fieldset>
@@ -49,7 +50,7 @@
                             $banco2->query("SELECT * FROM supervisor");
 
                             foreach ($banco2->result() as $supervisor) : ?>
-                                <option value="<?php echo $supervisor['idSupervisor']; ?>"><?php echo $supervisor['nomeSupervisor']; ?></option>
+                                <option value=""><?php echo $supervisor['NOMESUPERVISOR']; ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
