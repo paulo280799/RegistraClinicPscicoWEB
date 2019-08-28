@@ -23,14 +23,22 @@
         <label>Paciente</label>
         <select class="form-control select2-single" name="paciente">
           <option selected>Escolha...</option>
+          <?php
 
+          require '../Banco/conexao.php';
+
+          $banco = new Banco("localhost", "psico", "root", "");
+          $banco->query("SELECT * FROM paciente");
+          foreach ($banco->result() as $paciente) : ?>
+          <option value="<?php echo $paciente['IDPACIENTE']; ?>"><?php echo $paciente['NOMEPACIENTE']; ?></option>
+          <?php endforeach; ?>
         </select>
       </div>
       <div class="form-group col-md-6">
         <label>Aluno</label>
         <select class="form-control select2-single" name="aluno">
           <option selected>Escolha...</option>
-          <?php require '../Banco/conexao.php';
+          <?php
           $banco2 = new Banco("localhost", "psico", "root", "");
           $banco2->query("SELECT * FROM aluno");
           foreach ($banco2->result() as $aluno) : ?>
