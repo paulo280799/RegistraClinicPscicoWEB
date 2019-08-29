@@ -20,7 +20,7 @@
     <div class="table-responsive" style="margin-left: 20px; margin-top: 50px;">
 
         <table class="table table-striped">
-            <caption>Lista de vinculos Aluno - Paciente</caption>
+            <caption>Lista de vínculos Aluno - Paciente</caption>
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -36,31 +36,31 @@
 
                 $banco = new Banco("localhost", "psico", "root", "");
 
-                $banco->query("SELECT * FROM aluno JOIN vincularalunosupervisor ON aluno.IDALUNO = vincularalunosupervisor.aluno_idAluno JOIN supervisor ON supervisor.idSupervisor = vincularalunosupervisor.supervisor_idSupervisor");
+                $banco->query("SELECT * FROM aluno JOIN vincularpacientealuno ON aluno.IDALUNO = vincularpacientealuno.aluno_idAluno JOIN paciente ON paciente.IDPACIENTE = vincularpacientealuno.paciente_idPaciente");
 
                 foreach ($banco->result() as $vinculo) : ?>
-                    <tr>
-                        <td><?php echo $vinculo['idVincularAlunosSupervisor']; ?></td>
-                        <td><?php echo $vinculo['NOMEALUNO']; ?></td>
-                        <td><?php echo $vinculo['nomeSupervisor']; ?></td>
-                        <td><?php echo $vinculo['dataInicioSupervisao']; ?></td>
-                        <td>
-                            <a href="TelaAlunoSupervisor.php?editar=<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" class="btn btn-primary" style="background-color: #26619c">Editar</a>
-                            <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#excluir<?php echo $vinculo['idVincularAlunosSupervisor']; ?>">Excluir</button>
-                            <div class="modal fade" id="excluir<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-body">
-                                            <p>Você realmente deseja excluir <strong><?php echo $vinculo['idVincularAlunosSupervisor']; ?></strong>?
-                                        </div>
-                                        <div class="modal-footer">
-                                            <a href="<?php echo $vinculo['idVincularAlunosSupervisor']; ?>" class="btn btn-danger">Excluir</a>
-                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
-                                        </div>
+                <tr>
+                    <td><?php echo $vinculo['idVincularPacienteAluno']; ?></td>
+                    <td><?php echo $vinculo['NOMEALUNO']; ?></td>
+                    <td><?php echo $vinculo['NOMEPACIENTE']; ?></td>
+                    <td><?php echo $vinculo['dataInicioAtendimento']; ?></td>
+                    <td>
+                        <a href="TelaAlunoPaciente.php?editar=<?php echo $vinculo['idVincularPacienteAluno']; ?>" class="btn btn-primary" style="background-color: #26619c">Editar</a>
+                        <button type="submit" class="btn btn-danger" data-toggle="modal" data-target="#excluir<?php echo $vinculo['idVincularPacienteAluno']; ?>">Excluir</button>
+                        <div class="modal fade" id="excluir<?php echo $vinculo['idVincularPacienteAluno']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body">
+                                        <p>Você realmente deseja excluir <strong><?php echo $vinculo['idVincularPacienteAluno']; ?></strong>?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a href="../Atendimento/DeletarAlunoPaciente.php?deletar=<?php echo $vinculo['idVincularPacienteAluno']; ?>" class="btn btn-danger">Excluir</a>
+                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Não</button>
                                     </div>
                                 </div>
-                        </td>
-                    </tr>
+                            </div>
+                    </td>
+                </tr>
                 <?php endforeach; ?>
             </tbody>
         </table>

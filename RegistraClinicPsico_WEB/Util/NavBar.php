@@ -1,7 +1,7 @@
-<?php 
+<?php
 session_start();
 
-if(!isset($_SESSION['idUsuario'])){
+if (!isset($_SESSION['idUsuario'])) {
   header("Location: ../Autenticacao/DeslogarUsuario.php");
 }
 ?>
@@ -28,10 +28,7 @@ if(!isset($_SESSION['idUsuario'])){
         </ul>
       </li>
       <li class="nav-item active" id="items-li">
-        <a class="nav-link" href="Agendamento.php" id="items-a">Agendamento<span class="sr-only">(current)</span></a>
-      </li>      
-      <li class="nav-item active" id="items-li">
-        <a class="nav-link" id="items-a">Atendimento</a>
+        <a class="nav-link" id="items-a">Vínculo</a>
         <ul class="sub-menu">
           <li class="sub-menu-li"><a href="../telas/TelaAlunoSupervisor.php">Aluno - Supervisor</a></li>
           <li class="sub-menu-li"><a href="../telas/TelaAlunoPaciente.php">Aluno - Paciente</a></li>
@@ -44,7 +41,7 @@ if(!isset($_SESSION['idUsuario'])){
   <div class="collapse navbar-collapse">
     <ul class="navbar-nav" id="menu-logado">
       <li class="nav-item">
-        <span><?php echo"Bem Vindo | ".$_SESSION['nomeUsuario']; ?></span>
+        <span><?php echo "Bem Vindo | " . $_SESSION['nomeUsuario']; ?></span>
       </li>
       <li class="nav-item">
       </li>

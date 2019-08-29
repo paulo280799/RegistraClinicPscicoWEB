@@ -15,63 +15,78 @@
 
 <body>
     <?php include_once '../Util/NavBar.php'; ?>
+    <?php include_once '../Atendimento/EditarAlunoPaciente.php'; ?>
     <div class="container">
-        <form action="" method="post">
-            <fieldset>
-                <legend class="fw" style="text-align: center;">Vincular<br> Aluno -> Paciente</legend>
-                <br>
-                <div class="row">
-                    <div class="form-group col-sm-6">
-                        <label id="idAluno" class="fw">Aluno:</label>
-                        <select name="idAluno" class="form-control select2-single" id="idAluno" required>
-                            <option value="">Selecione</option>
-                            <?php
-                            require '../Banco/conexao.php';
 
-                            $banco = new Banco("localhost", "psico", "root", "");
 
-                            $banco->query("SELECT IDALUNO, NOMEALUNO , MATRICULAALUNO , CPFALUNO, EMAILALUNO, TURMAALUNO FROM  aluno");
+        <?php if (isset($_GET['editar'])) : ?>
+        <form action="../Atendimento/EditarAlunoPaciente.php" method="post">
+            <?php else : ?>
+            <form action="../Atendimento/CadastrarAlunoPaciente.php" method="post">
+                <?php endif; ?>
+                <fieldset>
+                    <legend class="fw" style="text-align: center;">Vincular<br> Aluno -> Paciente</legend>
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <br>
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <label id="idAluno" class="fw">Aluno:</label>
+                            <select name="idAluno" class="form-control select2-single" id="idAluno" required>
+                                <option value="">Selecione</option>
+                                <?php
+                                require_once '../Banco/conexao.php';
 
-                            foreach ($banco->result() as $aluno) : ?>
-                                <option value="<?php echo $aluno['IDALUNO']; ?>"><?php echo $aluno['NOMEALUNO']; ?></option>
-                            <?php endforeach; ?>
-                        </select>
+                                $banco = new Banco("localhost", "psico", "root", "");
+
+                                $banco->query("SELECT IDALUNO, NOMEALUNO FROM  aluno");
+
+                                foreach ($banco->result() as $aluno) : ?>
+                                <option value="<?php echo $aluno['IDALUNO']; ?>" <?php
+                                                                                        if ($aluno['IDALUNO'] == $aluno_idAluno) {
+                                                                                            echo "selected";
+                                                                                        }
+                                                                                        ?>><?php echo $aluno['NOMEALUNO']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+
+                        <div class="form-group col-sm-6">
+                            <label id="idPaciente" class="fw">Paciente:</label>
+                            <select name="idPaciente" class="form-control select2-single" id="idPaciente" required>
+                                <option value="">Selecione</option>
+                                <?php
+
+                                $banco2 = new Banco("localhost", "psico", "root", "");
+
+                                $banco2->query("SELECT * FROM paciente");
+
+                                foreach ($banco2->result() as $paciente) : ?>
+                                <option value="<?php echo $paciente['IDPACIENTE']; ?>" <?php
+                                                                                            if ($paciente['IDPACIENTE'] == $paciente_idPaciente) {
+                                                                                                echo "selected";
+                                                                                            }
+                                                                                            ?>><?php echo $paciente['NOMEPACIENTE']; ?></option>
+                                <?php endforeach; ?>
+                            </select>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <label id="dataAtendimento" class="fw">Data Atendimento:</label>
+                            <input type="date" name="dataAtendimento" class="form-control" value="<?php echo $dataInicioAtendimento; ?>" id="dataAtendimento" required />
+                        </div>                        
                     </div>
-
-                    <div class="form-group col-sm-6">
-                        <label id="idPaciente" class="fw">Paciente:</label>
-                        <select name="idPaciente" class="form-control select2-single" id="idPaciente" required>
-                            <option value="">Selecione</option>
-                            <?php
-
-                            $banco2 = new Banco("localhost", "psico", "root", "");
-
-                            $banco2->query("SELECT * FROM paciente");
-
-                            foreach ($banco2->result() as $paciente) : ?>
-                                <option value="<?php echo $paciente['IDPACIENTE']; ?>"><?php echo $paciente['NOMEPACIENTE']; ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <label id="dataAtendimento" class="fw">Data Atendimento:</label>
-                        <input type="date" name="dataAtendimento" class="form-control" id="dataAtendimento" required />
-                    </div>
-                    <div class="form-group col-sm-6">
-                        <label id="situacaoAtendimento" class="fw">Situação:</label>
-                        <select name="situacaoAtendimento" class="form-control" id="situacaoAtendimento" required>
-                            <option value="">Selecione</option>
-                            <option value="Em espera">Em espera</option>
-                            <option value="Ativo">Ativo</option>
-                            <option value="Inativo">Inativo</option>
-                        </select>
-                    </div>
-                </div>
-                <button type="submit" value="cadastrar" class="btn btn-outline-success">Enviar</button>
-                <button type="reset" class="btn btn-outline-success">Limpar</button>
-                <a href="TelaPesquisaAlunoPaciente.php" class="btn btn-outline-success">Pesquisar</a>
-            </fieldset>
-        </form>
+                    <?php if (isset($_GET['editar'])) : ?>
+                    <button type="submit" name="atualizar" value="atualizar" class="btn btn-outline-primary" style="background-color: #26619c; color: white;">
+                        Atualizar
+                    </button>
+                    <?php else : ?>
+                    <button type="submit" name="cadastrar" value="cadastrar" class="btn btn-outline-success" style="background-color: #26619c; color: white;">
+                        Salvar
+                    </button>
+                    <?php endif; ?>
+                    <button type="reset" class="btn btn-outline-success">Limpar</button>
+                    <a href="TelaPesquisaAlunoPaciente.php" class="btn btn-outline-success">Pesquisar</a>
+                </fieldset>
+            </form>
 
     </div>
 

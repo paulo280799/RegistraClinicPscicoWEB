@@ -35,37 +35,37 @@
 
 				$banco = new Banco("localhost","psico","root","");
 
-				$banco->query("SELECT * FROM  SUPERVISOR");
+				$banco->query("SELECT * FROM supervisor");
 
 				foreach ($banco->result() as $supervisor): ?>
 					<tr>
-						<td><?php echo $supervisor['IDSUPERVISOR']; ?></td>
-						<td><?php echo $supervisor['NOMESUPERVISOR']; ?></td>
-						<td><?php echo $supervisor['CIDADESUPERVISOR']; ?></td>
-						<td><?php echo $supervisor['TURMASUPERVISOR']; ?></td>
-						<td><?php echo $supervisor['ESPECIALIZACAOSUPERVISOR']; ?></td>
+						<td><?php echo $supervisor['idSupervisor']; ?></td>
+						<td><?php echo $supervisor['nomeSupervisor']; ?></td>
+						<td><?php echo $supervisor['cidadeSupervisor']; ?></td>
+						<td><?php echo $supervisor['turmaSupervisor']; ?></td>
+						<td><?php echo $supervisor['especializacaoSupervisor']; ?></td>
 						<td>
-							<a href="../telas/TelaSupervisor.php?editar=<?php echo $supervisor['IDSUPERVISOR']; ?>" 
+							<a href="../telas/TelaSupervisor.php?editar=<?php echo $supervisor['idSupervisor']; ?>" 
 								class="btn btn-primary" style="background-color: #26619c">Editar
 							</a>
 							<button 
 								type="submit" class="btn btn-danger" data-toggle="modal" 
-								data-target="#excluir<?php echo $supervisor['IDSUPERVISOR']; ?>">
+								data-target="#excluir<?php echo $supervisor['idSupervisor']; ?>">
 								Excluir
 							</button>
 							<div 
 								class="modal fade" 
-								id="excluir<?php echo $supervisor['IDSUPERVISOR']; ?>" 
+								id="excluir<?php echo $supervisor['idSupervisor']; ?>" 
 								tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content">
 										<div class="modal-body">
 											<p>Você realmente deseja excluir 
-												<strong><?php echo $supervisor['NOMESUPERVISOR']; ?></strong>?
+												<strong><?php echo $supervisor['nomeSupervisor']; ?></strong>?
 										</div>
 										<div class="modal-footer">
 											<a href="../Supervisor/DeletarSupervisor.php?deletar=<?php 
-											echo $supervisor['IDSUPERVISOR']; ?>" 
+											echo $supervisor['idSupervisor']; ?>" 
 												class="btn btn-danger">
 												Excluir
 											</a>

@@ -24,26 +24,26 @@ if (isset($_GET['editar'])) {
 
 	$banco = new Banco("localhost","psico","root","");
 
-	$banco->query("SELECT * FROM supervisor WHERE IDSUPERVISOR = $idSupervisor");
+	$banco->query("SELECT * FROM supervisor WHERE idSupervisor = $idSupervisor");
 
 	foreach ($banco->result() as $supervisor) {
 
-		$idSupervisor = $supervisor['IDSUPERVISOR']; 
-		$nomeSupervisor =  $supervisor['NOMESUPERVISOR'];
-		$cpfSupervisor=  $supervisor['CPFSUPERVISOR'];
-		$rgSupervisor=  $supervisor['RGSUPERVISOR'];
-		$dataNascimentoSupervisor=  $supervisor['DATANASCIMENTOSUPERVISOR'];
-		$sexoSupervisor=  $supervisor['SEXOSUPERVISOR'];
-		$telefoneSupervisor=  $supervisor['TELEFONESUPERVISOR'];
-		$estadoSupervisor=  $supervisor['ESTADOSUPERVISOR'];
-		$cidadeSupervisor=  $supervisor['CIDADESUPERVISOR'];
-		$bairroSupervisor=  $supervisor['BAIRROSUPERVISOR'];
-		$ruaSupervisor=  $supervisor['RUASUPERVISOR'];
-		$numCasaSupervisor=  $supervisor['NUMCASASUPERVISOR'];
-		$complementoSupervisor=  $supervisor['COMPLEMENTOSUPERVISOR'];
-		$emailSupervisor=  $supervisor['EMAILSUPERVISOR'];
-		$turmaSupervisor=  $supervisor['TURMASUPERVISOR'];
-		$especializacaoSupervisor =  $supervisor['ESPECIALIZACAOSUPERVISOR'];
+		$idSupervisor = $supervisor['idSupervisor']; 
+		$nomeSupervisor =  $supervisor['nomeSupervisor'];
+		$cpfSupervisor=  $supervisor['cpfSupervisor'];
+		$rgSupervisor=  $supervisor['rgSupervisor'];
+		$dataNascimentoSupervisor=  $supervisor['dataNascimentoSupervisor'];
+		$sexoSupervisor=  $supervisor['sexoSupervisor'];
+		$telefoneSupervisor=  $supervisor['telefoneSupervisor'];
+		$estadoSupervisor=  $supervisor['estadoSupervisor'];
+		$cidadeSupervisor=  $supervisor['cidadeSupervisor'];
+		$bairroSupervisor=  $supervisor['bairroSupervisor'];
+		$ruaSupervisor=  $supervisor['enderecoSupervisor'];
+		$numCasaSupervisor=  $supervisor['enderecoNumeroSupervisor'];
+		$complementoSupervisor=  $supervisor['complementoSupervisor'];
+		$emailSupervisor=  $supervisor['emailSupervisor'];
+		$turmaSupervisor=  $supervisor['turmaSupervisor'];
+		$especializacaoSupervisor =  $supervisor['especializacaoSupervisor'];
 	}
 }
 
