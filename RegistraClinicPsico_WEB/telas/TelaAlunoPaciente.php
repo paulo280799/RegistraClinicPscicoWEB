@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>Menu Princial!</title>
+    <title>Aluno - Paciente!</title>
 </head>
 
 <body>
@@ -75,16 +75,12 @@
                         </div>                        
                     </div>
                     <?php if (isset($_GET['editar'])) : ?>
-                    <button type="submit" name="atualizar" value="atualizar" class="btn btn-outline-primary" style="background-color: #26619c; color: white;">
-                        Atualizar
-                    </button>
+                    <button class="btn btn-primary" type="submit" name="atualizar" value="atualizar">Atualizar</button>
                     <?php else : ?>
-                    <button type="submit" name="cadastrar" value="cadastrar" class="btn btn-outline-success" style="background-color: #26619c; color: white;">
-                        Salvar
-                    </button>
+                    <button class="btn btn-primary" type="submit" name="cadastrar" value="cadastrar">Cadastrar</button>
                     <?php endif; ?>
-                    <button type="reset" class="btn btn-outline-success">Limpar</button>
-                    <a href="TelaPesquisaAlunoPaciente.php" class="btn btn-outline-success">Pesquisar</a>
+                    <input class="btn btn-primary" type="reset" value="Limpar">
+                    <a class="btn btn-primary" href="TelaPesquisaAlunoPaciente.php" role="button">Pesquisar</a>
                 </fieldset>
             </form>
 

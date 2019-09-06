@@ -15,51 +15,48 @@
 
     <?php require_once '../Usuario/EditarUsuario.php'; ?>
 
-
     <div class="container">
-    <?php if(isset($_GET['editar'])):?>
-    <form action="../Usuario/EditarUsuario.php" method="post">
-    <?php else: ?>
-    <form action="../Usuario/CadastroUsuario.php" method="post">
-    <?php endif; ?>
-      <fieldset>
-        <legend class="fw" style="text-align: center;">Cadastro de Usuário</legend>
-        <input type="hidden" name="idUsuario" value="<?php echo $id; ?>">
-        <div class="row">
-        <div class="form-group col-sm-12">
-          <label id="nomeUsuario" class="fw">Nome:</label>
-          <input type="text" name="nomeUsuario" value="<?php echo $nome; ?>" class="form-control" id="nomeUsuario">
-        </div>
+      <?php if(isset($_GET['editar'])):?>
+        <form action="../Usuario/EditarUsuario.php" method="post">
+      <?php else: ?>
+        <form action="../Usuario/CadastroUsuario.php" method="post">
+      <?php endif; ?>
+        <fieldset>
+          <legend class="fw" style="text-align: center;">Cadastro de Usuário</legend>
+          <input type="hidden" name="idUsuario" value="<?php echo $id; ?>">
+          <div class="row">
+            <div class="form-group col-sm-12">
+              <label id="nomeUsuario" class="fw">Nome:</label>
+              <input type="text" name="nomeUsuario" value="<?php echo $nome; ?>" class="form-control" id="nomeUsuario">
+            </div>
 
-        <div class="form-group col-sm-4">
-          <label id="loginUsuario" class="fw">Login:</label>
-          <input type="text" name="loginUsuario" value="<?php echo $login; ?>" class="form-control" id="loginUsuario">
-        </div>
+            <div class="form-group col-sm-4">
+              <label id="loginUsuario" class="fw">Login:</label>
+              <input type="text" name="loginUsuario" value="<?php echo $login; ?>" class="form-control" id="loginUsuario">
+            </div>
 
-        <div class="form-group col-sm-4">
-          <label id="senhaUsuario" class="fw">Senha:</label>
-          <input type="text" name="senhaUsuario" value="<?php echo $senha; ?>" class="form-control" id="senhaUsuario">
-        </div>
+            <div class="form-group col-sm-4">
+              <label id="senhaUsuario" class="fw">Senha:</label>
+              <input type="text" name="senhaUsuario" value="<?php echo $senha; ?>" class="form-control" id="senhaUsuario">
+            </div>
 
-        <div class="form-group col-sm-4">
-          <label id="nivelUsuario" class="fw">Nível de acesso:</label>
-          <select name="nivelUsuario" class="form-control" id="nivelUsuario">
-            <option value="<?php echo $nivel; ?>"><?php echo $nivel; ?></option>
-            <option value="Administrador">Administrador</option>
-            <option value="Funcionario">Funcionário</option>
-          </select>
-        </div>
-        </div>
+            <div class="form-group col-sm-4">
+              <label id="nivelUsuario" class="fw">Nível de acesso:</label>
+              <select name="nivelUsuario" class="form-control" id="nivelUsuario">
+                <option value="<?php echo $nivel; ?>"><?php echo $nivel; ?></option>
+                <option value="Administrador">Administrador</option>
+                <option value="Funcionario">Funcionário</option>
+              </select>
+            </div>
+          </div>
         <br>
         <?php if(isset($_GET['editar'])):?>
-        <button type="submit" name="atualizar" value="atualizar" class="btn btn-outline-primary">Atualizar</button>
+          <button class="btn btn-primary" type="submit" name="atualizar" value="atualizar">Atualizar</button>
         <?php else : ?>
-        <button type="submit" name="cadastrar" value="cadastrar" class="btn btn-outline-success">ENVIAR</button>
+          <button class="btn btn-primary" type="submit" name="cadastrar" value="cadastrar">Cadastrar</button>
         <?php endif; ?>
-        <button type="reset" class="btn btn-outline-success">LIMPAR</button>
-        <a href="TelaPesquisaUsuario.php" class="btn btn-outline-success">Pesquisar</a>
-
-
+        <input class="btn btn-primary" type="reset" value="Limpar">
+        <a class="btn btn-primary" href="TelaPesquisaUsuario.php" role="button">Pesquisar</a>
       </fieldset>
     </form>
   </div>

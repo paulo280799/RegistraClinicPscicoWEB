@@ -14,20 +14,18 @@
 
 <body>
   <?php include_once '../Util/NavBar.php'; ?>
-  <div class="container">
-    <p>Bem vindo <?php echo $_SESSION['nomeUsuario']; ?></p>
-
-    <br>
-    <h2>Registra Clinica Psicologia</h2>
-    
-  </div>
-
+ 
+  <footer style="bottom:0px; position:fixed; text-align: center;  width: 100%; height: 40px;">
+    <div >Fábrica de software © 2019 Copyright:
+      <a href="#"> fabricadesoft.com.br</a>
+    </div>
+  </footer>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-  <?php include_once '../Util/Footer.php'; ?>
+  
 </body>
 
 </html>

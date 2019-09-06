@@ -18,15 +18,19 @@
   <?php require_once '../Paciente/EditarPaciente.php'; ?>
 
   <div class="container">
-      <?php if(isset($_GET['editar'])):?>
-      <form action="../Paciente/EditarPaciente.php" method="post">
-      <?php else: ?>
-      <form action="../Paciente/CadastroPaciente.php" method="post">
-      <?php endif; ?>
-      <fieldset>
-        <legend class="fw" style="text-align: center;">Cadastro de Paciente</legend>
-        <input type="hidden" name="idPaciente" value="<?php echo $idPaciente; ?>">
-        <div class="row" >
+
+    <?php if(isset($_GET['editar'])):?>
+    <form action="../Paciente/EditarPaciente.php" method="post">
+    <?php else: ?>
+    <form action="../Paciente/CadastroPaciente.php" method="post">
+    <?php endif; ?>
+
+    <fieldset>
+      <legend class="fw" style="text-align: center;">Cadastro de Paciente</legend>
+      <input type="hidden" name="idPaciente" value="<?php echo $idPaciente; ?>">
+
+      <div class="row" >
+
         <div class="form-group col-sm-10">
           <label class="fw">Nome:</label>
           <input type="text" name="nomePaciente" value="<?php echo $nomePaciente; ?>" class="form-control">
@@ -47,7 +51,7 @@
           <input type="text" name="rgPaciente" value="<?php echo $rgPaciente; ?>" class="form-control" >
         </div>
 
-       <div class="form-group col-sm-4">
+        <div class="form-group col-sm-4">
           <label class="fw">Sexo Paciente:</label>
           <select name="sexoPaciente" class="form-control" >
             <option value="<?php echo $sexoPaciente; ?>" ><?php echo $sexoPaciente; ?></option>
@@ -66,7 +70,7 @@
           <label  class="fw">Telefone Opcional:</label>
           <input type="text" name="telefoneOpcionalPaciente"  value="<?php echo $telefoneOpcionalPaciente; ?>" class="form-control" >
         </div>
-              
+            
         <div class="form-group col-sm-4">
           <label  class="fw">Estado Civil:</label>
           <select name="estadoCivil" class="form-control" >
@@ -76,105 +80,78 @@
             <option value="Outros">Outros</option>
           </select>
         </div>
-          
-        </div>
-
-        </div>
-
-        <div class="row" style="margin-left: 110px; margin-right: 120px;">
+        
         <div class="form-group col-sm-6">
-            <label id="cidade" class="fw" >Cidade:</label>
-            <input type="text" name="cidade"  class="form-control" value="<?php echo $cidadePaciente; ?>" >
-          </div>
-
-          <div class="form-group col-sm-6">
-            <label id="bairro" class="fw">Bairro:</label>
-            <input type="text" name="bairro"  class="form-control" value="<?php echo $bairroPaciente; ?>">
-          </div>
-
-          <div class="form-group col-sm-6">
-            <label id="rua" class="fw">Rua:</label>
-            <input type="text" name="rua"  class="form-control" value="<?php echo $ruaPaciente; ?>">
-          </div>
-
-          <div class="form-group col-sm-6">
-            <label id="numCasa" class="fw">Numero da casa:</label>
-            <input type="text" name="numCasa"  class="form-control" value="<?php echo $endereco; ?>">
-          </div>
-
-        </div>        
-
-        <div class="row"style="margin-left: 110px; margin-right: 120px;">
-        <div class="form-group col-sm-10">
-            <label class="fw">Responsável:</label>
-            <input type="text" name="responsavel"  class="form-control" value="<?php echo $responsavel; ?>">
-          </div>
-
-          <div class="form-group col-sm-6">
-            <label class="fw">Situação:</label>
-            <input type="text" name="situacao" class="form-control" value="<?php echo $situaçãoPaciente; ?>">
-          </div>
-
-          <div class="form-group col-sm-6">
-            <label class="fw">Tipo de Paciente:</label>
-            <input type="text" name="tipoPaciente" class="form-control" value="<?php echo $tipoPaciente; ?>">
-          </div>
+          <label id="cidade" class="fw" >Cidade:</label>
+          <input type="text" name="cidade"  class="form-control" value="<?php echo $cidadePaciente; ?>" >
         </div>
-          <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label class="fw">Queixa Principal:</label>
-            <input type="text" name="queixaPrincipal" class="form-control" value="<?php echo $queixaPricipal; ?>">
-          </div>
 
-          <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label class="fw">Disponibilidade:</label>
-            <input type="text" name="disponibilidade" class="form-control" value="<?php echo $disponibilidade; ?>">
-          </div>
+        <div class="form-group col-sm-6">
+          <label id="bairro" class="fw">Bairro:</label>
+          <input type="text" name="bairro"  class="form-control" value="<?php echo $bairroPaciente; ?>">
+        </div>
 
-          <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label class="fw">Setor de encaminhamento:</label>
-            <input type="text" name="setorEncaminhado" class="form-control" value="<?php echo $setorDeEncaminhamento; ?>">
-          </div>
+        <div class="form-group col-sm-6">
+          <label id="rua" class="fw">Rua:</label>
+          <input type="text" name="rua"  class="form-control" value="<?php echo $ruaPaciente; ?>">
+        </div>
 
-          <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label  class="fw">Contra referencia:</label>
-            <input type="text" name="contrareferencia" class="form-control" value="<?php echo $contrarreferencia; ?>">
-          </div>
+        <div class="form-group col-sm-6">
+          <label id="numCasa" class="fw">Numero da casa:</label>
+          <input type="text" name="numCasa"  class="form-control" value="<?php echo $endereco; ?>">
+        </div>
+                
+        <div class="form-group col-sm-10">
+          <label class="fw">Responsável:</label>
+          <input type="text" name="responsavel"  class="form-control" value="<?php echo $responsavel; ?>">
+        </div>
 
-          <div class="form-group" style="padding-left: 120px; padding-right: 120px;">
-            <label  class="fw">Outros:</label>
-            <input type="text" name="outros" class="form-control" value="<?php echo $outros; ?>">
-          </div>
+        <div class="form-group col-sm-6">
+          <label class="fw">Situação:</label>
+          <input type="text" name="situacao" class="form-control" value="<?php echo $situaçãoPaciente; ?>">
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label class="fw">Tipo de Paciente:</label>
+          <input type="text" name="tipoPaciente" class="form-control" value="<?php echo $tipoPaciente; ?>">
+        </div>
+      </div>
+      <div class="form-group" >
+          <label class="fw">Queixa Principal:</label>
+          <input type="text" name="queixaPrincipal" class="form-control" value="<?php echo $queixaPricipal; ?>">
+        </div>
+
+        <div class="form-group" >
+          <label class="fw">Disponibilidade:</label>
+          <input type="text" name="disponibilidade" class="form-control" value="<?php echo $disponibilidade; ?>">
+        </div>
+
+        <div class="form-group" >
+          <label class="fw">Setor de encaminhamento:</label>
+          <input type="text" name="setorEncaminhado" class="form-control" value="<?php echo $setorDeEncaminhamento; ?>">
+        </div>
+
+        <div class="form-group" >
+          <label  class="fw">Contra referencia:</label>
+          <input type="text" name="contrareferencia" class="form-control" value="<?php echo $contrarreferencia; ?>">
+        </div>
+
+        <div class="form-group" >
+          <label  class="fw">Outros:</label>
+          <input type="text" name="outros" class="form-control" value="<?php echo $outros; ?>">
+        </div>
 
         <br>
-        <br>
-        <br>
 
-         <div style="padding-left: 120px;">
-           <?php if(isset($_GET['editar'])):?>
-          <button 
-            type="submit" name="atualizar" value="atualizar" class="btn btn-outline-primary"  
-            style="background-color: #26619c; color: white;">
-            Atualizar
-          </button>
+        <?php if(isset($_GET['editar'])):?>
+          <button class="btn btn-primary" type="submit" name="atualizar" value="atualizar">Atualizar</button>
         <?php else : ?>
-          <button 
-            type="submit" name="cadastrar" value="cadastrar" class="btn btn-outline-success"
-            style="background-color: #26619c; color: white;">
-            Salvar
-          </button>
+          <button class="btn btn-primary" type="submit" name="cadastrar" value="cadastrar">Cadastrar</button>
         <?php endif; ?>
 
-        <button type="reset" class="btn btn-outline-success"
-          style="background-color: #26619c; color: white;">
-          Limpar
-        </button>
-        <a 
-          href="TelaPesquisaPaciente.php" 
-          class="btn btn-outline-success"
-          style="background-color: #26619c; color: white;">
-          Pesquisar
-        </a>
-         </div>
+        <input class="btn btn-primary" type="reset" value="Limpar">
+        <a class="btn btn-primary" href="TelaPesquisaPaciente.php"  role="button">Pesquisar</a>
+
       </fieldset>  
     </form>   
   </div>

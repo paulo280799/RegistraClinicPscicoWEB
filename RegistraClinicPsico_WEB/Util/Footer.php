@@ -3,7 +3,7 @@
 
 
 <!-- Footer -->
-<footer class="container-fluid font-small blue">
+<footer class="container-fluid font-small blue" style="bottom:0px; position:absolut;">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">Fábrica de software © 2019 Copyright:

@@ -20,8 +20,6 @@ $emailSupervisor= addslashes($_POST['emailSupervisor']);
 $turmaSupervisor= addslashes($_POST['turmaSupervisor']);
 $especializacaoSupervisor = addslashes($_POST['especializacaoSupervisor']);
 
-//echo var_dump($Supervisor);
-
 $banco = new Banco("localhost","psico","root","");
 
 try {

@@ -1,4 +1,4 @@
-re<?php
+<?php
 
 $id = 0;
 $nome = "";

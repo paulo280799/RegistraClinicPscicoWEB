@@ -16,8 +16,6 @@
   <?php include_once '../Util/NavBar.php'; ?>
   <?php require_once '../Aluno/EditarAluno.php'; ?>
 
-  <br>
-
   <div class="container">
 
     <?php if(isset($_GET['editar'])):?>
@@ -121,33 +119,15 @@
         </div>
 
         <br>
-        <br>
-        <br>
 
         <?php if(isset($_GET['editar'])):?>
-          <button 
-            type="submit" name="atualizar" value="atualizar" class="btn btn-outline-primary"  
-            style="background-color: #26619c; color: white;">
-            Atualizar
-          </button>
+          <button class="btn btn-primary" type="submit" name="atualizar" value="atualizar">Atualizar</button>
         <?php else : ?>
-          <button 
-            type="submit" name="cadastrar" value="cadastrar" class="btn btn-outline-success"
-            style="background-color: #26619c; color: white;">
-            Salvar
-          </button>
+          <button class="btn btn-primary" type="submit" name="cadastrar" value="cadastrar">Salvar</button>
         <?php endif; ?>
 
-        <button 
-          type="reset" class="btn btn-outline-success" 
-          style="background-color: #26619c; color: white;">
-          Limpar
-        </button>
-        <a 
-          href="TelaPesquisaAluno.php" class="btn btn-outline-success"
-          style="background-color: #26619c; color: white;">
-          Pesquisar
-        </a>
+        <input class="btn btn-primary" type="reset" value="Limpar">
+        <a class="btn btn-primary" href="TelaPesquisaAluno.php" role="button">Pesquisar</a>
         
       </fieldset>  
     </form>   
