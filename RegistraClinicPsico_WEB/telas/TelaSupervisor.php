@@ -27,27 +27,27 @@
         <div class="row">
           <div class="form-group col-sm-8">
             <label class="fw">Nome:</label>
-            <input type="text" name="nomeSupervisor" class="form-control" value="<?php echo $nomeSupervisor; ?>">
+            <input type="text" name="nomeSupervisor" class="form-control" value="<?php echo $nomeSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-4">
             <label class="fw">CPF:</label>
-            <input type="text" name="cpfSupervisor" class="form-control" value="<?php echo $cpfSupervisor; ?>">
+            <input type="text" name="cpfSupervisor" class="form-control" value="<?php echo $cpfSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-6">
             <label class="fw">RG:</label>
-            <input type="text" name="rgSupervisor" class="form-control" value="<?php echo $rgSupervisor; ?>">
+            <input type="text" name="rgSupervisor" class="form-control" value="<?php echo $rgSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-6">
             <label class="fw">Data de Nascimento:</label>
-            <input type="date" name="dataNascimentoSupervisor" class="form-control" value="<?php echo $dataNascimentoSupervisor; ?>">
+            <input type="date" name="dataNascimentoSupervisor" class="form-control" value="<?php echo $dataNascimentoSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-4">
             <label class="fw">Sexo Aluno:</label>
-            <select name="sexoSupervisor" class="form-control">
+            <select name="sexoSupervisor" class="form-control" required>
               <option value="<?php echo $sexoSupervisor; ?>"><?php echo $sexoSupervisor; ?></option>
               <option value="Masculino">Masculino</option>
               <option value="Feminino">Feminino</option>
@@ -57,53 +57,53 @@
 
           <div class="form-group col-sm-6">
             <label  class="fw">Telefone:</label>
-            <input type="text" name="telefoneSupervisor" class="form-control" value="<?php echo $telefoneSupervisor; ?>">
+            <input type="text" name="telefoneSupervisor" class="form-control" value="<?php echo $telefoneSupervisor; ?>" required>
           </div>
         </div>
         <div class="row">        
           <div class="form-group col-sm-4">
             <label class="fw">Estado:</label>
-            <input type="text" name="estadoSupervisor" class="form-control" value="<?php echo $estadoSupervisor; ?>">
+            <input type="text" name="estadoSupervisor" class="form-control" value="<?php echo $estadoSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-4">
             <label class="fw">Cidade:</label>
-            <input type="text" name="cidadeSupervisor" class="form-control" value="<?php echo $cidadeSupervisor; ?>">
+            <input type="text" name="cidadeSupervisor" class="form-control" value="<?php echo $cidadeSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-4">
             <label class="fw">Bairro:</label>
-            <input type="text" name="bairroSupervisor" class="form-control" value="<?php echo $bairroSupervisor; ?>">
+            <input type="text" name="bairroSupervisor" class="form-control" value="<?php echo $bairroSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-6">
             <label class="fw">Rua:</label>
-            <input type="text" name="ruaSupervisor" class="form-control" value="<?php echo $ruaSupervisor; ?>">
+            <input type="text" name="ruaSupervisor" class="form-control" value="<?php echo $ruaSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-4">
             <label class="fw">Numero da casa:</label>
-            <input type="text" name="numCasaSupervisor" class="form-control" value="<?php echo $numCasaSupervisor; ?>">
+            <input type="text" name="numCasaSupervisor" class="form-control" value="<?php echo $numCasaSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-2">
             <label class="fw">Complemento:</label>
-            <input type="text" name="complementoSupervisor" class="form-control" value="<?php echo $complementoSupervisor; ?>">
+            <input type="text" name="complementoSupervisor" class="form-control" value="<?php echo $complementoSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-6">
             <label class="fw">Email:</label>
-            <input type="text" name="emailSupervisor" class="form-control" value="<?php echo $emailSupervisor; ?>">
+            <input type="text" name="emailSupervisor" class="form-control" value="<?php echo $emailSupervisor; ?>" required>
           </div>        
 
           <div class="form-group col-sm-6">
             <label class="fw">Turma do Supervisor:</label>
-            <input type="text" name="turmaSupervisor" class="form-control" value="<?php echo $turmaSupervisor; ?>">
+            <input type="text" name="turmaSupervisor" class="form-control" value="<?php echo $turmaSupervisor; ?>" required>
           </div>
 
           <div class="form-group col-sm-12">
             <label class="fw">Especialização:</label>
-            <input type="text" name="especializacaoSupervisor" class="form-control" value="<?php echo $especializacaoSupervisor; ?>">
+            <input type="text" name="especializacaoSupervisor" class="form-control" value="<?php echo $especializacaoSupervisor; ?>" required>
           </div>
         </div>
         <br>

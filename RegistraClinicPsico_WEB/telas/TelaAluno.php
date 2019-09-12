@@ -30,28 +30,28 @@
         <div class="row">
         <div class="form-group col-sm-8">
           <label class="fw">Nome:</label>
-          <input type="text" name="nomeAluno"  value="<?php echo $nomeAluno; ?> " class="form-control">
+          <input type="text" name="nomeAluno"  value="<?php echo $nomeAluno; ?> " class="form-control" required>
         </div>
 
         <div class="form-group col-sm-4">
           <label class="fw">Matricula:</label>
-          <input type="text" name="matriculaAluno" value="<?php echo $matriculaAluno; ?>" class="form-control">
+          <input type="text" name="matriculaAluno" value="<?php echo $matriculaAluno; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">CPF:</label>
-          <input type="text" name="cpfAluno" value="<?php echo $cpfAluno; ?> "class="form-control">
+          <input type="text" name="cpfAluno" value="<?php echo $cpfAluno; ?> "class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">RG:</label>
-          <input type="text" name="rgAluno"  value="<?php echo $rgAluno; ?> "class="form-control">
+          <input type="text" name="rgAluno"  value="<?php echo $rgAluno; ?> "class="form-control" required>
         </div>
         
         
         <div class="form-group col-sm-4">
           <label  class="fw">Sexo Aluno:</label>
-          <select name="sexoAluno" class="form-control" >
+          <select name="sexoAluno" class="form-control" required>
             <option value="<?php echo $sexoAluno; ?>"><?php echo $sexoAluno; ?></option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
@@ -61,12 +61,12 @@
 
         <div class="form-group col-sm-3">
           <label class="fw">Data de Nascimento:</label>
-          <input type="date" name="dataNascimentoAluno" value="<?php echo $dataNascimentoAluno; ?> "class="form-control">
+          <input type="date" name="dataNascimentoAluno" value="<?php echo $dataNascimentoAluno; ?> "class="form-control" required>
         </div>
 
         <div class="form-group col-sm-5">
           <label class="fw">Telefone:</label>
-          <input type="text" name="telefoneAluno" value="<?php echo $telefoneAluno; ?>" class="form-control">
+          <input type="text" name="telefoneAluno" value="<?php echo $telefoneAluno; ?>" class="form-control" required>
         </div>
 
         </div>
@@ -74,33 +74,33 @@
         <div class="row">        
         <div class="form-group col-sm-4">
           <label class="fw">Estado:</label>
-          <input type="text" name="estadoAluno" value="<?php echo $estadoAluno; ?>" class="form-control">
+          <input type="text" name="estadoAluno" value="<?php echo $estadoAluno; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">Cidade:</label>
-          <input type="text" name="cidadeAluno" value="<?php echo $cidadeAluno; ?>" class="form-control">
+          <input type="text" name="cidadeAluno" value="<?php echo $cidadeAluno; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-2">
           <label class="fw">Numero da casa:</label>
-          <input type="number" name="numCasaAluno" value="<?php echo $numCasaAluno; ?> "class="form-control" >
+          <input type="number" name="numCasaAluno" value="<?php echo $numCasaAluno; ?> "class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">Rua:</label>
-          <input type="text" name="ruaAluno" value="<?php echo $ruaAluno; ?> "class="form-control">
+          <input type="text" name="ruaAluno" value="<?php echo $ruaAluno; ?> "class="form-control" required>
         </div>        
 
         <div class="form-group col-sm-4">
           <label class="fw">Bairro:</label>
-          <input type="text" name="bairroAluno" value="<?php echo $bairroAluno; ?>" class="form-control">
+          <input type="text" name="bairroAluno" value="<?php echo $bairroAluno; ?>" class="form-control" required>
         </div>
 
         
         <div class="form-group col-sm-2">
           <label class="fw">Complemento:</label>
-          <input type="text" name="complementoAluno" value="<?php echo $complementoAluno; ?>" class="form-control">
+          <input type="text" name="complementoAluno" value="<?php echo $complementoAluno; ?>" class="form-control" required>
         </div>
 
         </div>
@@ -108,12 +108,12 @@
         <div class="row">
         <div class="form-group col-sm-6">
           <label class="fw">Email:</label>
-          <input type="email" name="emailAluno"  value="<?php echo $emailAluno; ?>" class="form-control">
+          <input type="email" name="emailAluno"  value="<?php echo $emailAluno; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">Turma do Aluno:</label>
-          <input type="text" name="turmaAluno"  value="<?php echo $turmaAluno; ?>" class="form-control">
+          <input type="text" name="turmaAluno"  value="<?php echo $turmaAluno; ?>" class="form-control" required>
         </div>
 
         </div>

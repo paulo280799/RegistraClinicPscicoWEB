@@ -27,22 +27,22 @@
           <div class="row">
             <div class="form-group col-sm-12">
               <label id="nomeUsuario" class="fw">Nome:</label>
-              <input type="text" name="nomeUsuario" value="<?php echo $nome; ?>" class="form-control" id="nomeUsuario">
+              <input type="text" name="nomeUsuario" value="<?php echo $nome; ?>" class="form-control" id="nomeUsuario" required>
             </div>
 
             <div class="form-group col-sm-4">
               <label id="loginUsuario" class="fw">Login:</label>
-              <input type="text" name="loginUsuario" value="<?php echo $login; ?>" class="form-control" id="loginUsuario">
+              <input type="text" name="loginUsuario" value="<?php echo $login; ?>" class="form-control" id="loginUsuario" required>
             </div>
 
             <div class="form-group col-sm-4">
               <label id="senhaUsuario" class="fw">Senha:</label>
-              <input type="text" name="senhaUsuario" value="<?php echo $senha; ?>" class="form-control" id="senhaUsuario">
+              <input type="text" name="senhaUsuario" value="<?php echo $senha; ?>" class="form-control" id="senhaUsuario" required>
             </div>
 
             <div class="form-group col-sm-4">
               <label id="nivelUsuario" class="fw">Nível de acesso:</label>
-              <select name="nivelUsuario" class="form-control" id="nivelUsuario">
+              <select name="nivelUsuario" class="form-control" id="nivelUsuario" required>
                 <option value="<?php echo $nivel; ?>"><?php echo $nivel; ?></option>
                 <option value="Administrador">Administrador</option>
                 <option value="Funcionario">Funcionário</option>

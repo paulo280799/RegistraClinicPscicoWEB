@@ -27,33 +27,33 @@
 
     <fieldset>
       <legend class="fw" style="text-align: center;">Cadastro de Paciente</legend>
-      <input type="hidden" name="idPaciente" value="<?php echo $idPaciente; ?>">
+      <input type="hidden" name="idPaciente" value="<?php echo $idPaciente; ?>" >
 
       <div class="row" >
 
         <div class="form-group col-sm-10">
           <label class="fw">Nome:</label>
-          <input type="text" name="nomePaciente" value="<?php echo $nomePaciente; ?>" class="form-control">
+          <input type="text" name="nomePaciente" value="<?php echo $nomePaciente; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-2">
           <label class="fw">Idade:</label>
-          <input type="number" name="idadePaciente" value="<?php echo $idadePaciente; ?>" class="form-control">
+          <input type="number" name="idadePaciente" value="<?php echo $idadePaciente; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">CPF:</label>
-          <input type="text" name="cpfPaciente" value="<?php echo $cpfPaciente; ?>"  class="form-control">
+          <input type="text" name="cpfPaciente" value="<?php echo $cpfPaciente; ?>"  class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">RG:</label>
-          <input type="text" name="rgPaciente" value="<?php echo $rgPaciente; ?>" class="form-control" >
+          <input type="text" name="rgPaciente" value="<?php echo $rgPaciente; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-4">
           <label class="fw">Sexo Paciente:</label>
-          <select name="sexoPaciente" class="form-control" >
+          <select name="sexoPaciente" class="form-control" required>
             <option value="<?php echo $sexoPaciente; ?>" ><?php echo $sexoPaciente; ?></option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
@@ -63,17 +63,17 @@
 
         <div class="form-group col-sm-6">
           <label  class="fw">Telefone:</label>
-          <input type="text" name="telefonePaciente"  value="<?php echo $telefonePaciente; ?>" class="form-control" >
+          <input type="text" name="telefonePaciente"  value="<?php echo $telefonePaciente; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label  class="fw">Telefone Opcional:</label>
-          <input type="text" name="telefoneOpcionalPaciente"  value="<?php echo $telefoneOpcionalPaciente; ?>" class="form-control" >
+          <input type="text" name="telefoneOpcionalPaciente"  value="<?php echo $telefoneOpcionalPaciente; ?>" class="form-control" required>
         </div>
             
         <div class="form-group col-sm-4">
           <label  class="fw">Estado Civil:</label>
-          <select name="estadoCivil" class="form-control" >
+          <select name="estadoCivil" class="form-control" required>
             <option value="<?php echo $estadoCivil; ?>" ><?php echo $estadoCivil; ?></option>
             <option value="Solteiro">Solteiro(a)</option>
             <option value="Casado">Casado(a)</option>
@@ -83,62 +83,62 @@
         
         <div class="form-group col-sm-6">
           <label id="cidade" class="fw" >Cidade:</label>
-          <input type="text" name="cidade"  class="form-control" value="<?php echo $cidadePaciente; ?>" >
+          <input type="text" name="cidade"  class="form-control" value="<?php echo $cidadePaciente; ?>" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label id="bairro" class="fw">Bairro:</label>
-          <input type="text" name="bairro"  class="form-control" value="<?php echo $bairroPaciente; ?>">
+          <input type="text" name="bairro"  class="form-control" value="<?php echo $bairroPaciente; ?>" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label id="rua" class="fw">Rua:</label>
-          <input type="text" name="rua"  class="form-control" value="<?php echo $ruaPaciente; ?>">
+          <input type="text" name="rua"  class="form-control" value="<?php echo $ruaPaciente; ?>" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label id="numCasa" class="fw">Numero da casa:</label>
-          <input type="text" name="numCasa"  class="form-control" value="<?php echo $endereco; ?>">
+          <input type="text" name="numCasa"  class="form-control" value="<?php echo $endereco; ?>" required>
         </div>
                 
         <div class="form-group col-sm-10">
           <label class="fw">Responsável:</label>
-          <input type="text" name="responsavel"  class="form-control" value="<?php echo $responsavel; ?>">
+          <input type="text" name="responsavel"  class="form-control" value="<?php echo $responsavel; ?>" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">Situação:</label>
-          <input type="text" name="situacao" class="form-control" value="<?php echo $situaçãoPaciente; ?>">
+          <input type="text" name="situacao" class="form-control" value="<?php echo $situaçãoPaciente; ?>" required>
         </div>
 
         <div class="form-group col-sm-6">
           <label class="fw">Tipo de Paciente:</label>
-          <input type="text" name="tipoPaciente" class="form-control" value="<?php echo $tipoPaciente; ?>">
+          <input type="text" name="tipoPaciente" class="form-control" value="<?php echo $tipoPaciente; ?>" required>
         </div>
       </div>
       <div class="form-group" >
           <label class="fw">Queixa Principal:</label>
-          <input type="text" name="queixaPrincipal" class="form-control" value="<?php echo $queixaPricipal; ?>">
+          <input type="text" name="queixaPrincipal" class="form-control" value="<?php echo $queixaPricipal; ?>" required>
         </div>
 
         <div class="form-group" >
           <label class="fw">Disponibilidade:</label>
-          <input type="text" name="disponibilidade" class="form-control" value="<?php echo $disponibilidade; ?>">
+          <input type="text" name="disponibilidade" class="form-control" value="<?php echo $disponibilidade; ?>" required>
         </div>
 
         <div class="form-group" >
           <label class="fw">Setor de encaminhamento:</label>
-          <input type="text" name="setorEncaminhado" class="form-control" value="<?php echo $setorDeEncaminhamento; ?>">
+          <input type="text" name="setorEncaminhado" class="form-control" value="<?php echo $setorDeEncaminhamento; ?>" required>
         </div>
 
         <div class="form-group" >
           <label  class="fw">Contra referencia:</label>
-          <input type="text" name="contrareferencia" class="form-control" value="<?php echo $contrarreferencia; ?>">
+          <input type="text" name="contrareferencia" class="form-control" value="<?php echo $contrarreferencia; ?>" required>
         </div>
 
         <div class="form-group" >
           <label  class="fw">Outros:</label>
-          <input type="text" name="outros" class="form-control" value="<?php echo $outros; ?>">
+          <input type="text" name="outros" class="form-control" value="<?php echo $outros; ?>" required>
         </div>
 
         <br>
