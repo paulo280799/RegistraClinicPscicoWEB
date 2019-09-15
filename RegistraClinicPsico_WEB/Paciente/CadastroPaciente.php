@@ -77,10 +77,11 @@ try {
 	"OUTROS"=>$outros
 ));
 
+include_once('../pdf/PDFCadastroPaciente.php');
+
 	echo "<script>alert('SALVO COM SUCESSO !!');window.location = '../telas/TelaPaciente.php';</script>";
 
 	
 } catch (Exception $e) {
 	echo "<script>alert('ERRO AO SALVAR PACIENTE!!')</script>";
 }
-?>
