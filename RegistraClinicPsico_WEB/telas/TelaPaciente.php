@@ -33,12 +33,12 @@
 
         <div class="form-group col-sm-9">
           <label class="fw">Numero de Prontuário:</label>
-          <input type="text" name="nomePaciente" value="<?php echo $nomePaciente; ?>" class="form-control" required>
+          <input type="text" name="prontuario" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-3">
           <label class="fw">Data de Cadastro:</label>
-          <input type="date" name="idadePaciente" value="<?php echo $idadePaciente; ?>" class="form-control" required>
+          <input type="date" name="dataCadastro" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-9">
@@ -48,7 +48,7 @@
 
         <div class="form-group col-sm-3">
           <label class="fw">Data de Nascimento:</label>
-          <input type="date" name="idadePaciente" value="<?php echo $idadePaciente; ?>" class="form-control" required>
+          <input type="date" name="dataNascimento"  class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">

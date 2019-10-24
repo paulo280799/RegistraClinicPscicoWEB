@@ -67,8 +67,10 @@ INSERT INTO `aluno` (`IDALUNO`, `NOMEALUNO`, `MATRICULAALUNO`, `CPFALUNO`, `RGAL
 DROP TABLE IF EXISTS `paciente`;
 CREATE TABLE IF NOT EXISTS `paciente` (
   `IDPACIENTE` int(11) NOT NULL AUTO_INCREMENT,
+  `PRONTUARIO` varchar(255) NOT NULL,
+  `DATACADASTRO`DATE,
   `NOMEPACIENTE` varchar(255) NOT NULL,
-  `IDADEPACIENTE` int(11) NOT NULL,
+  `DATANASCIMENTO` DATE,
   `CPFPACIENTE` varchar(255) NOT NULL,
   `RGPACIENTE` varchar(255) NOT NULL,
   `SEXOPACIENTE` varchar(255) NOT NULL,
@@ -122,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `supervisor` (
   `telefoneSupervisor` varchar(20) DEFAULT NULL,
   `turmaSupervisor` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`idSupervisor`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `supervisor`
@@ -145,7 +147,7 @@ CREATE TABLE IF NOT EXISTS `usuario` (
   `senhaUsuario` varchar(255) DEFAULT NULL,
   `tipoUsuario` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`idUsuario`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Extraindo dados da tabela `usuario`

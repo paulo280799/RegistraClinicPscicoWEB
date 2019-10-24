@@ -2,8 +2,10 @@
 include_once '../Paciente/Paciente.php';
 require '../Banco/conexao.php';
 
+$prontuario = addslashes($_POST['prontuario']);
+$dataCadastro = addslashes($_POST['dataCadastro']);
 $nomePaciente = addslashes($_POST['nomePaciente']);
-$idadePaciente = addslashes($_POST['idadePaciente']);
+$dataNascimento = addslashes($_POST['dataNascimento']);
 $cpfPaciente = addslashes($_POST['cpfPaciente']);
 $rgPaciente = addslashes($_POST['rgPaciente']);
 $sexoPaciente = addslashes($_POST['sexoPaciente']);
@@ -55,8 +57,10 @@ $banco = new Banco("localhost","psico","root","");
 try {
 
 	$banco->insert("paciente", array(
+	"PRONTUARIO"=>$prontuario,
+	"DATACADASTRO"=>$dataCadastro,
 	"NOMEPACIENTE"=>$nomePaciente,
-	"IDADEPACIENTE"=>$idadePaciente,
+	"DATANASCIMENTO"=>$dataNascimento,
 	"CPFPACIENTE" =>$cpfPaciente,
 	"RGPACIENTE"=>$rgPaciente,
 	"SEXOPACIENTE"=>$sexoPaciente,
