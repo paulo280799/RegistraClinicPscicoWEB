@@ -23,11 +23,11 @@
 			<caption>Lista de pacientes cadastrados</caption>
 			<thead>
 				<tr>
-					<th scope="col">#</th>
+					<th scope="col">Prontuário</th>
 					<th scope="col">Nome</th>
-					<th scope="col">CPF</th>
+					<th scope="col">Data de Cadastro</th>
 					<th scope="col">Telefone</th>
-					<th scope="col">Cidade</th>
+					<th scope="col">Situação</th>
 					<th scope="col"> </th>
 				</tr>
 			</thead>
@@ -41,11 +41,11 @@
 
 				foreach ($banco->result() as $paciente) : ?>
 					<tr>
-						<td><?php echo $paciente['IDPACIENTE']; ?></td>
+						<td><?php echo $paciente['PRONTUARIO']; ?></td>
 						<td><?php echo $paciente['NOMEPACIENTE']; ?></td>
-						<td><?php echo $paciente['CPFPACIENTE']; ?></td>
+						<td><?php echo $paciente['DATACADASTRO']; ?></td>
 						<td><?php echo $paciente['TELEFONEPACIENTE']; ?></td>
-						<td><?php echo $paciente['CIDADEPACIENTE']; ?></td>
+						<td><?php echo $paciente['SITUACAOPACIENTE']; ?></td>
 						<td>
 							<a href="../pdf/comprovantes_cadastro/<?php echo $paciente['CPFPACIENTE']; ?>.pdf" class="btn btn-success"
 							download="comprovante_<?php echo $paciente['NOMEPACIENTE']; ?>">

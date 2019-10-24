@@ -1,8 +1,10 @@
 <?php
 
-$idPaciente = 0;  
+$idPaciente = 0;
+$prontuario = "";
+$dataCadastro = "";
 $nomePaciente = "";
-$idadePaciente = "";
+$dataNascimento = "";
 $cpfPaciente = "";
 $rgPaciente = "";
 $sexoPaciente = "";
@@ -33,9 +35,11 @@ if (isset($_GET['editar'])) {
 
 	foreach ($banco->result() as $resultado) {
 
-		$idPaciente = $resultado['IDPACIENTE'];  
+		$idPaciente = $resultado['IDPACIENTE'];
+		$prontuario = $resultado['PRONTUARIO'];
+		$dataCadastro = $resultado['DATACADASTRO'];  
 		$nomePaciente = $resultado['NOMEPACIENTE'];
-		$idadePaciente = $resultado['IDADEPACIENTE'];
+		$dataNascimento = $resultado['DATANASCIMENTO'];
 		$cpfPaciente = $resultado['CPFPACIENTE'];
 		$rgPaciente = $resultado['RGPACIENTE'];
 		$sexoPaciente = $resultado['SEXOPACIENTE'];
@@ -63,8 +67,10 @@ if (isset($_POST['atualizar'])) {
 	require '../Banco/conexao.php';
 
 	$idPaciente = addslashes($_POST['idPaciente']);
+	$prontuario = addslashes($_POST['prontuario']);
+	$dataCadastro = addslashes($_POST['dataCadastro']);
 	$nomePaciente = addslashes($_POST['nomePaciente']);
-	$idadePaciente = addslashes($_POST['idadePaciente']);
+	$dataNascimento = addslashes($_POST['dataNascimento']);
 	$cpfPaciente = addslashes($_POST['cpfPaciente']);
 	$rgPaciente = addslashes($_POST['rgPaciente']);
 	$sexoPaciente = addslashes($_POST['sexoPaciente']);
@@ -89,8 +95,10 @@ if (isset($_POST['atualizar'])) {
 	try {
 
 		$banco->update("paciente", array(
+			"PRONTUARIO"=>$prontuario,
+			"DATACADASTRO"=>$dataCadastro,
 			"NOMEPACIENTE"=>$nomePaciente,
-			"IDADEPACIENTE"=>$idadePaciente,
+			"DATANASCIMENTO"=>$dataNascimento,
 			"CPFPACIENTE" =>$cpfPaciente,
 			"RGPACIENTE"=>$rgPaciente,
 			"SEXOPACIENTE"=>$sexoPaciente,
