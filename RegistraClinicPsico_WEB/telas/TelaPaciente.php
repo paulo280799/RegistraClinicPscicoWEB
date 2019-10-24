@@ -37,8 +37,8 @@
         </div>
 
         <div class="form-group col-sm-2">
-          <label class="fw">Idade:</label>
-          <input type="number" name="idadePaciente" value="<?php echo $idadePaciente; ?>" class="form-control" required>
+          <label class="fw">Data de Nascimento:</label>
+          <input type="date" name="idadePaciente" value="<?php echo $idadePaciente; ?>" class="form-control" required>
         </div>
 
         <div class="form-group col-sm-6">
@@ -108,7 +108,12 @@
 
         <div class="form-group col-sm-6">
           <label class="fw">Situação:</label>
-          <input type="text" name="situacao" class="form-control" value="<?php echo $situaçãoPaciente; ?>" required>
+          <select name="situacao" class="form-control" required>
+          <option value=""></option>
+            <option value="Ativo">Ativo(a)</option>
+            <option value="Inativo">Inativo(a)</option>
+            <option value="Em Espera">Em Espera</option>
+          </select>
         </div>
 
         <div class="form-group col-sm-6">
