@@ -31,12 +31,22 @@
 
       <div class="row" >
 
-        <div class="form-group col-sm-10">
+        <div class="form-group col-sm-9">
+          <label class="fw">Numero de Prontuário:</label>
+          <input type="text" name="nomePaciente" value="<?php echo $nomePaciente; ?>" class="form-control" required>
+        </div>
+
+        <div class="form-group col-sm-3">
+          <label class="fw">Data de Cadastro:</label>
+          <input type="date" name="idadePaciente" value="<?php echo $idadePaciente; ?>" class="form-control" required>
+        </div>
+
+        <div class="form-group col-sm-9">
           <label class="fw">Nome:</label>
           <input type="text" name="nomePaciente" value="<?php echo $nomePaciente; ?>" class="form-control" required>
         </div>
 
-        <div class="form-group col-sm-2">
+        <div class="form-group col-sm-3">
           <label class="fw">Data de Nascimento:</label>
           <input type="date" name="idadePaciente" value="<?php echo $idadePaciente; ?>" class="form-control" required>
         </div>
@@ -51,12 +61,22 @@
           <input type="text" name="rgPaciente" value="<?php echo $rgPaciente; ?>" class="form-control" required>
         </div>
 
-        <div class="form-group col-sm-4">
+        <div class="form-group col-sm-6">
           <label class="fw">Sexo Paciente:</label>
           <select name="sexoPaciente" class="form-control" required>
             <option value="<?php echo $sexoPaciente; ?>" ><?php echo $sexoPaciente; ?></option>
             <option value="Masculino">Masculino</option>
             <option value="Feminino">Feminino</option>
+            <option value="Outros">Outros</option>
+          </select>
+        </div>
+
+        <div class="form-group col-sm-6">
+          <label  class="fw">Estado Civil:</label>
+          <select name="estadoCivil" class="form-control" required>
+            <option value="<?php echo $estadoCivil; ?>" ><?php echo $estadoCivil; ?></option>
+            <option value="Solteiro">Solteiro(a)</option>
+            <option value="Casado">Casado(a)</option>
             <option value="Outros">Outros</option>
           </select>
         </div>
@@ -69,16 +89,6 @@
         <div class="form-group col-sm-6">
           <label  class="fw">Telefone Opcional:</label>
           <input type="text" name="telefoneOpcionalPaciente"  value="<?php echo $telefoneOpcionalPaciente; ?>" class="form-control" required>
-        </div>
-            
-        <div class="form-group col-sm-4">
-          <label  class="fw">Estado Civil:</label>
-          <select name="estadoCivil" class="form-control" required>
-            <option value="<?php echo $estadoCivil; ?>" ><?php echo $estadoCivil; ?></option>
-            <option value="Solteiro">Solteiro(a)</option>
-            <option value="Casado">Casado(a)</option>
-            <option value="Outros">Outros</option>
-          </select>
         </div>
         
         <div class="form-group col-sm-6">
@@ -101,7 +111,7 @@
           <input type="text" name="numCasa"  class="form-control" value="<?php echo $endereco; ?>" required>
         </div>
                 
-        <div class="form-group col-sm-10">
+        <div class="form-group col-sm-12">
           <label class="fw">Responsável:</label>
           <input type="text" name="responsavel"  class="form-control" value="<?php echo $responsavel; ?>" required>
         </div>
